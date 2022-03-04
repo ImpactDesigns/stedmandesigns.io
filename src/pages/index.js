@@ -4,9 +4,7 @@ import '../assets/index.css'
 const subtitleText = {
   margin: '12px 0px 60px 0px',
   fontFamily: 'Source Code Pro',
-  textTransform: 'uppercase',
-  color: '#373B5E',
-  background: '#FBF7F4',
+  textTransform: 'uppercase'
 }
 
 const IndexPage = () => {
