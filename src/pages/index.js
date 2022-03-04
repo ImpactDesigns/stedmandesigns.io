@@ -12,7 +12,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1>
-        Don't worry, it's coming.
+        Don't worry, it's coming. Jeezus on the dashboard.
       </h1>
     </main>
   )
