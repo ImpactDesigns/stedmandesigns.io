@@ -5,3 +5,39 @@ body {
     background: #373B5E;
     font-family: -apple-system, Roboto, sans-serif, serif;
 }
+
+h1 {
+    margin: 0px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #FBF7F4;
+}
+
+p {
+    margin: 0px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FBF7F4;
+    /* border: 1px dashed orange; */
+}
+
+.page-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: calc(100vh / 2);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+
+.content-wrapper {
+    grid-column: 1 / 13;
+    /* border: 1px solid dodgerblue; */
+}
