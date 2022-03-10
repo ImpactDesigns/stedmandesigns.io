@@ -7,13 +7,10 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    gap: 40px;
     border: 2px solid dodgerblue;
 
-    & > h1 {
-        margin: 0px;
-
-        border: 1px dashed green;
+    & > div:last-child {
+        margin-bottom: 0px;
     }
 
     @media (min-width: 768px) {

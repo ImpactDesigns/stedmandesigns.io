@@ -3,19 +3,15 @@ import styled from 'styled-components'
 import mobileDesktopSceneImg from '../../images/desktop-sm-x2.png'
 
 const CardContainer = styled.div`
+    margin-bottom: 48px;
     grid-column: 1 / 13;
-    // padding: 0px 20px 0px 20px;
-    // background: rgba(255, 189, 153, 0.6);
-    // background: lightgreen;
-    // border-radius: 4px;
-    // border: 1px solid orange;
+    border: 1px solid orange;
 `
 
 const ImageContainer = styled.div`
     padding: 72px 20px 72px 20px;
-    background: rgba(255, 189, 153, 0.6);
+    background: ${props => props.backgroundColor};
     border-radius: 4px;
-
     // border: 1px dashed purple;
 
     & > img {
@@ -53,17 +49,21 @@ const DescBody = styled.p`
     // border: 1px dashed green;
 `
 
-export default function DemoCard() {
-  return (
-    <CardContainer>
-        <ImageContainer>
-            <img src={mobileDesktopSceneImg} alt={'Preview of Rocket Auction platform on a screen.'} />
-        </ImageContainer>
+export default function DemoCard(props) {
+    const { color } = props 
 
-        <MobileDescContainer>
-            <DescTitle>Project Title</DescTitle>
-            <DescBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</DescBody>
-        </MobileDescContainer>
-    </CardContainer>
-  )
+    console.log(color)
+
+    return (
+        <CardContainer>
+            <ImageContainer backgroundColor={color}>
+                <img src={mobileDesktopSceneImg} alt={'Preview of Rocket Auction platform on a screen.'} />
+            </ImageContainer>
+
+            <MobileDescContainer>
+                <DescTitle>Project Title</DescTitle>
+                <DescBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</DescBody>
+            </MobileDescContainer>
+        </CardContainer>
+    )
 }
