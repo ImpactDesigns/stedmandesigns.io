@@ -1,7 +1,8 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 export default function MyWorkPage() {
   return (
-    <div>my-work</div>
+    <Layout>my-work</Layout>
   )
 }
