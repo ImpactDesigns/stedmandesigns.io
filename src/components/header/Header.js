@@ -67,9 +67,9 @@ export default function Header() {
     <StyledHeader>
       <NameText>Stedman Designs</NameText>
       <LinksList>
-        <li><Link to={'/work'}>Work</Link></li>
-        <li><Link to={'/about'}>About</Link></li>
-        <li><Link to={'/contact'} activeClassName={'active-link'}>Contact</Link></li>
+        <li><Link to={'/my-work'}>Work</Link></li>
+        <li><Link to={'/about-me'}>About</Link></li>
+        <li><Link to={'/contact-me'} activeClassName={'active-link'}>Contact</Link></li>
       </LinksList>
       <MenuIcon src={menuIcon} alt={'Click to open menu'} />
     </StyledHeader>
