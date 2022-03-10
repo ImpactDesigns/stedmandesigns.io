@@ -33,6 +33,7 @@ const NameText = styled.h5`
 
 const MenuIcon = styled.img`
   width: 32px;
+  cursor: pointer;
   // border: 1px dashed green;
 
   @media (min-width: 768px) {

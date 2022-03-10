@@ -53,6 +53,7 @@ const CloseImage = styled.img`
     top: 40px;
     right: 24px;
     width: 32px;
+    cursor: pointer;
     //   border: 1px dashed green;
 `
 
