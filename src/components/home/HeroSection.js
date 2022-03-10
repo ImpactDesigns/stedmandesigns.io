@@ -3,11 +3,10 @@ import styled from 'styled-components'
 
 const StyledSection = styled.section`
     padding: 20px 20px 20px 20px;
-    //   min-height: calc(100vh - 80px);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    border: 2px solid orange;
+    // border: 2px solid orange;
 
     @media (min-width: 768px) {
         padding: 20px 80px 20px 80px;
@@ -29,7 +28,7 @@ const HeroTitle = styled.h1`
     line-height: 40px;
     text-align: center;
     color: rgba(88, 97, 101, 0.8);
-    border: 1px dashed green;
+    // border: 1px dashed green;
 
     @media (min-width: 768px) {
         font-weight: 700;
@@ -52,7 +51,7 @@ const HeroSubtitle = styled.h2`
     line-height: 32px;
     text-align: center;
     color: #586165;
-    border: 1px dashed green;
+    // border: 1px dashed green;
 
     @media (min-width: 768px) {
         font-size: 32px;
@@ -73,9 +72,10 @@ const HeroBody =  styled.h3`
     line-height: 20px;
     text-align: center;
     color: #586165;
-    border: 1px dashed green;
+    // border: 1px dashed green;
 
     & > span {
+        font-weight: 500;
         border-bottom: 1px solid #FFBD99;
     }
 
@@ -86,8 +86,6 @@ const HeroBody =  styled.h3`
     @media (min-width: 1024px) {
         margin-top: 16px;
         grid-column: 3 / 11;
-        // font-size: 20px;
-        // line-height: 24px;
     }
 `
 
@@ -101,7 +99,7 @@ const HeroBody2 = styled.p`
     text-align: center;
     text-transform: uppercase;
     color: #586165;
-    border: 1px dashed green;
+    // border: 1px dashed green;
 
     @media (min-width: 1024px) {
         margin-top: 40px;
