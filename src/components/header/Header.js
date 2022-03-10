@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from "gatsby"
 import styled from 'styled-components'
+import Flyout from './Flyout'
 import menuIcon from '../../images/icons/menu-icon.svg'
 
 const StyledHeader = styled.header`
+  position: relative;
   padding: 40px 20px 8px 20px;
   display: flex;
   justify-content: space-between;
@@ -82,6 +84,7 @@ export default function Header() {
         <li><Link to={'/contact-me'} activeClassName={'active-link'}>Contact</Link></li>
       </LinksList>
       <MenuIcon src={menuIcon} alt={'Click to open menu'} />
+      <Flyout />
     </StyledHeader>
   )
 }
