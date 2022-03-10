@@ -7,7 +7,7 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  // border: 2px solid orange;
+  border: 2px solid orange;
 `
 
 const TitleText = styled.h1`
