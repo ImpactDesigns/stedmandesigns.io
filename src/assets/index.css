@@ -18,3 +18,9 @@ h5 {
     line-height: 24px;
     color: #586165;
 }
+
+.active-link {
+    color: #586165;
+    font-weight: 600;
+    border-bottom: 2px solid #93DE4E;
+}

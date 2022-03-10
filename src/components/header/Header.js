@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby"
 import styled from 'styled-components'
 import menuIcon from '../../images/icons/menu-icon.svg'
 
@@ -42,12 +43,17 @@ const LinksList = styled.ul`
     // border: 1px dashed green;
   }
 
+  & > li > a {
+    color: #586165;
+    text-decoration: none;
+  }
+
   & > li:nth-child(2) {
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  & > li:hover {
+  & > li > a:hover {
     color: #93DE4E;
   }
 
@@ -61,9 +67,9 @@ export default function Header() {
     <StyledHeader>
       <NameText>Stedman Designs</NameText>
       <LinksList>
-        <li>Work</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><Link to={'/work'}>Work</Link></li>
+        <li><Link to={'/about'}>About</Link></li>
+        <li><Link to={'/contact'} activeClassName={'active-link'}>Contact</Link></li>
       </LinksList>
       <MenuIcon src={menuIcon} alt={'Click to open menu'} />
     </StyledHeader>
