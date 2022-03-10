@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from "gatsby"
 import styled from 'styled-components'
+import { UserContext } from '../../contexts/AppContext'
 import Flyout from './Flyout'
 import menuIcon from '../../images/icons/menu-icon.svg'
 
@@ -75,15 +76,27 @@ const LinksList = styled.ul`
 `
 
 export default function Header() {
+  const [isFlyoutOpen, setIsFlyoutOpen] = useContext(UserContext)
+
+  function openFlyout(status, setter) {
+    if (!status) {
+      setter(() => true)
+    }
+  }
+
   return (
     <StyledHeader>
-      <NameText>Stedman Designs</NameText>
+      <Link to={'/'}><NameText>Stedman Designs</NameText></Link>
       <LinksList>
         <li><Link to={'/my-work'} activeClassName={'active-link'}>Work</Link></li>
         <li><Link to={'/about-me'} activeClassName={'active-link'}>About</Link></li>
         <li><Link to={'/contact-me'} activeClassName={'active-link'}>Contact</Link></li>
       </LinksList>
-      <MenuIcon src={menuIcon} alt={'Click to open menu'} />
+      <MenuIcon 
+        src={menuIcon} 
+        alt={'Click to open menu'} 
+        onClick={() => openFlyout(isFlyoutOpen, setIsFlyoutOpen)} 
+      />
       <Flyout />
     </StyledHeader>
   )

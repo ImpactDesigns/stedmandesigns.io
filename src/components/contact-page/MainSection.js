@@ -88,7 +88,7 @@ export default function MainSection() {
     return (
         <StyledSection>
             <Form>
-                <Label for={'messageTextArea'}>Hey Stedman,</Label>
+                <Label htmlFor={'messageTextArea'}>Hey Stedman,</Label>
                 <Textarea id={'messageTextArea'} name={'messageTextArea'} placeholder={'Write your message here...'} />
                 <StyledLabel>Regards,</StyledLabel>
                 <input placeholder='Your name' />

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { UserContext } from '../../contexts/AppContext'
 import closeIcon from '../../images/icons/close-icon.svg'
 
 const FlyoutContainer = styled.div`
@@ -10,9 +11,9 @@ const FlyoutContainer = styled.div`
     right: 0px;
     padding: 0px 40px 0px 40px;
     height: 100vh;
-    // opacity: 70%;
     display: flex;
     align-items: center;
+    visibility: ${props => props.visibility};
     background: #fbfcfb;
     // border: 1px solid dodgerblue;
 `
@@ -42,33 +43,54 @@ const LinksList = styled.ul`
     // border: 1px dashed green;
   }
 
-  & > li:nth-child(2) {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
   & > li > a:hover {
     color: #93DE4E;
   }
 `
 
 const CloseImage = styled.img`
-  position: absolute;
-  top: 40px;
-  right: 24px;
-  width: 32px;
-//   border: 1px dashed green;
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    width: 32px;
+    //   border: 1px dashed green;
 `
 
 export default function Flyout() {
-  return (
-    <FlyoutContainer>
-        <CloseImage src={closeIcon} alt="Click to close menu." />
-        <LinksList>
-            <li><Link to={'/my-work'} activeClassName={'active-link'}>Work</Link></li>
-            <li><Link to={'/about-me'} activeClassName={'active-link'}>About</Link></li>
-            <li><Link to={'/contact-me'} activeClassName={'active-link'}>Contact</Link></li>
-        </LinksList>
-    </FlyoutContainer>
-  )
+    const [isFlyoutOpen, setIsFlyoutOpen] = useContext(UserContext)
+    const { visibility } = setFlyoutVisibiity(isFlyoutOpen)
+
+    function closeFlyout(status, setter) {
+        if (status) {
+            setter(() => false)
+        }
+    }
+
+    function setFlyoutVisibiity(status) {
+        if (status) {
+            return {
+                visibility: 'visible'
+            }
+        } else if (!status) {
+            return {
+                visibility: 'hidden'
+            }
+        }
+    }
+
+    return (
+        <FlyoutContainer visibility={visibility}>
+            <CloseImage 
+                src={closeIcon} 
+                alt={'Click to close menu.'} 
+                onClick={() => closeFlyout(isFlyoutOpen, setIsFlyoutOpen)} 
+            />
+            <LinksList>
+                <li><Link to={'/'} activeClassName={'mobile-active-link'}>Stedman Designs</Link></li>
+                <li><Link to={'/my-work'} activeClassName={'mobile-active-link'}>Work</Link></li>
+                <li><Link to={'/about-me'} activeClassName={'mobile-active-link'}>About</Link></li>
+                <li><Link to={'/contact-me'} activeClassName={'mobile-active-link'}>Contact</Link></li>
+            </LinksList>
+        </FlyoutContainer>
+    )
 }

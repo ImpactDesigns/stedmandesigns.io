@@ -8,6 +8,10 @@ body {
     background: #fbfcfb;
 }
 
+a {
+    text-decoration: none;
+}
+
 h5 {
     margin: 0px;
     display: inline;
@@ -68,6 +72,11 @@ button:active {
     color: #586165;
     font-weight: 600;
     border-bottom: 2px solid #93DE4E;
+}
+
+.mobile-active-link {
+    color: #586165;
+    font-weight: 600;
 }
 
 .mt-12px {
