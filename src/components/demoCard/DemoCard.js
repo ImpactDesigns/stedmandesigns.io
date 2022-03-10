@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import mobileDesktopSceneImg from '../../images/desktop-sm-x2.png'
 
 const CardContainer = styled.div`
+    position: relative;
     margin-bottom: 48px;
     grid-column: 2 / 12;
     // border: 1px solid orange;
@@ -62,15 +63,57 @@ const DescBody = styled.p`
     // border: 1px dashed green;
 `
 
+const HiddenLayer = styled.div`
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align: items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: rgba(88, 97, 101, 0.98);
+`
 
+const HiddenTitle = styled(DescTitle)`
+    color: #FBFCFB;
+    // border: 1px dashed green;
+`
+
+const HiddenBody = styled(DescBody)`
+    color: #FBFCFB;
+    // border: 1px dashed green;
+`
 
 export default function DemoCard(props) {
+    const [isCardHovered, setIsCardHovered] = useState(false)
     const { color } = props 
 
-    console.log(color)
+    function handleMouseEnter(status, setter) {
+        if (!status) {
+            setter(() => true)
+            alert('mouse has entered the element')
+        }
+    }
+
+    function handleMouseOut(status, setter) {
+        if (status) {
+            setter(() => false)
+            alert('mouse has left the element')
+        }
+    }
+
+    console.log(555, isCardHovered)
 
     return (
-        <CardContainer>
+        <CardContainer onMouseOver={() => handleMouseEnter(isCardHovered, setIsCardHovered)} onMouseLeave={() => handleMouseOut(isCardHovered, setIsCardHovered)} >
+            <HiddenLayer>
+                <HiddenTitle>Project Title</HiddenTitle>
+                <HiddenBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</HiddenBody>
+            </HiddenLayer>
             <ImageContainer backgroundColor={color}>
                 <img src={mobileDesktopSceneImg} alt={'Preview of Rocket Auction platform on a screen.'} />
             </ImageContainer>
