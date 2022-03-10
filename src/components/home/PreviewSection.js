@@ -7,7 +7,7 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    border: 2px solid dodgerblue;
+    // border: 2px solid dodgerblue;
 
     & > div:last-child {
         margin-bottom: 0px;
@@ -18,6 +18,7 @@ const StyledSection = styled.section`
     }
 
     @media (min-width: 1024px) {
+        gap: 40px;
         padding-top: 80px;
         padding-left: 144px;
         padding-right: 144px;

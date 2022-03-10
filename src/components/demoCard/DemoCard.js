@@ -4,8 +4,17 @@ import mobileDesktopSceneImg from '../../images/desktop-sm-x2.png'
 
 const CardContainer = styled.div`
     margin-bottom: 48px;
-    grid-column: 1 / 13;
-    border: 1px solid orange;
+    grid-column: 2 / 12;
+    // border: 1px solid orange;
+
+    // @media (min-width: 768px) {
+    //     grid-column: 2 / 12;
+    // }
+
+    @media (min-width: 1024px) {
+        grid-column: span 6;
+        margin-bottom: 0px;
+    }
 `
 
 const ImageContainer = styled.div`
@@ -25,6 +34,10 @@ const MobileDescContainer = styled.div`
     margin-top: 16px;
     display: block;
     // border: 1px dashed purple;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
 `
 
 const DescTitle = styled.h4`
@@ -48,6 +61,8 @@ const DescBody = styled.p`
     color: #586165;
     // border: 1px dashed green;
 `
+
+
 
 export default function DemoCard(props) {
     const { color } = props 
