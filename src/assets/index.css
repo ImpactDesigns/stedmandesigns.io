@@ -2,6 +2,8 @@
 
 body {
     margin: 0px;
-    background: #fbfcfb;
+    padding: 0px 20px;
+    min-height: 100vh;
     font-family: Poppins, -apple-system, Roboto, sans-serif, serif;
+    background: #fbfcfb;
 }
