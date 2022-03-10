@@ -54,8 +54,8 @@ const BodyText = styled.p`
   // border: 1px dashed green;
 
   @media (min-width: 768px) {
-    font-size: 24px;
-    line-height: 28px;  
+    font-size: 18px;
+    line-height: 20px;  
   }
 `
 

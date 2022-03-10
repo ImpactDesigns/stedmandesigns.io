@@ -2,20 +2,41 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledSection = styled.section`
-  padding: 0px 20px 0px 20px;
-  min-height: calc(100vh - 80px);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-//   border: 2px solid orange;
-`
+    padding: 40px 20px 0px 20px;
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    //   border: 2px solid orange;
 
+    @media (min-width: 768px) {
+        padding: 0px 80px 0px 80px;
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: 80px;
+        padding-left: 144px;
+        padding-right: 144px;
+    }
+`
 
 const Form = styled.form`
     margin: 0px;
     padding: 20px 0px 20px 0px;
     grid-column: 1 / 13;
     // border: 2px solid dodgerblue;
+
+    @media (min-width: 768px) {
+        grid-column: 3 / 11;
+    }
+
+    @media (min-width: 1024px) {
+        grid-column: 3 / 11;
+    }
+
+    @media (min-width: 1200px) {
+        grid-column: 4 / 10;
+    }
 `
 
 const Label = styled.label`
@@ -59,7 +80,6 @@ const StyledButton = styled.button`
 `
 
 export default function MainSection() {
-
     function handleButtonClick(e) {
         e.preventDefault()
         alert('button has been fired')

@@ -9,6 +9,16 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   // border: 1px solid lightcoral;
+
+  @media (min-width: 768px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 144px;
+    padding-right: 144px;
+  }
 `
 
 const NameText = styled.h5`
@@ -49,8 +59,8 @@ const LinksList = styled.ul`
   }
 
   & > li:nth-child(2) {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   & > li > a:hover {
