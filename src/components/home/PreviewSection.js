@@ -30,6 +30,8 @@ export default function PreviewSection() {
     <StyledSection>
        <DemoCard color={'rgba(255, 189, 153, 0.6)'} />
        <DemoCard color={'rgba(205, 206, 250, 0.6)'} />
+       <DemoCard color={'rgba(205, 206, 250, 0.6)'} />
+       <DemoCard color={'rgba(255, 189, 153, 0.6)'} />
     </StyledSection>
   )
 }

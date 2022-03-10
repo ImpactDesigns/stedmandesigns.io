@@ -70,7 +70,8 @@ const HiddenLayer = styled.div`
     right: 0px;
     bottom: 0px;
     padding: 0px 16px 0px 16px;
-    display: flex;
+    // display: flex;
+    display: ${props => props.display};
     flex-direction: column;
     align: items: center;
     justify-content: center;
@@ -91,26 +92,39 @@ const HiddenBody = styled(DescBody)`
 export default function DemoCard(props) {
     const [isCardHovered, setIsCardHovered] = useState(false)
     const { color } = props 
+    const { display } = setHiddenLayer(isCardHovered)
 
     function handleMouseEnter(status, setter) {
         if (!status) {
             setter(() => true)
-            alert('mouse has entered the element')
+            // alert('mouse has entered the element')
         }
     }
 
     function handleMouseOut(status, setter) {
         if (status) {
             setter(() => false)
-            alert('mouse has left the element')
+            // alert('mouse has left the element')
         }
     }
 
-    console.log(555, isCardHovered)
+    function setHiddenLayer(status) {
+        if (!status) {
+            return {
+                display: 'none'
+            }
+        } else if (status) {
+            return {
+                display: 'flex'
+            }
+        }
+    }
+
+    console.log(555, display)
 
     return (
         <CardContainer onMouseOver={() => handleMouseEnter(isCardHovered, setIsCardHovered)} onMouseLeave={() => handleMouseOut(isCardHovered, setIsCardHovered)} >
-            <HiddenLayer>
+            <HiddenLayer display={display}>
                 <HiddenTitle>Project Title</HiddenTitle>
                 <HiddenBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</HiddenBody>
             </HiddenLayer>
