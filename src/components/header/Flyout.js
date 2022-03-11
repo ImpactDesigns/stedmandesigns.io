@@ -9,12 +9,15 @@ const FlyoutContainer = styled.div`
     top: 0px;
     left: 0px;
     right: 0px;
+    bottom: 0px;
     padding: 0px 40px 0px 40px;
+    // min-height: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     visibility: ${props => props.visibility};
     background: #fbfcfb;
+    z-index: 5;
     // border: 1px solid dodgerblue;
 `
 
@@ -88,7 +91,7 @@ export default function Flyout() {
             />
             <LinksList>
                 <li><Link to={'/'} activeClassName={'mobile-active-link'}>Stedman Designs</Link></li>
-                <li><Link to={'/my-work'} activeClassName={'mobile-active-link'}>Work</Link></li>
+                {/* <li><Link to={'/my-work'} activeClassName={'mobile-active-link'}>Work</Link></li> */}
                 <li><Link to={'/about-me'} activeClassName={'mobile-active-link'}>About</Link></li>
                 <li><Link to={'/contact-me'} activeClassName={'mobile-active-link'}>Contact</Link></li>
             </LinksList>
