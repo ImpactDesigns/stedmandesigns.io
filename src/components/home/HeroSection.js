@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledSection = styled.section`
-    padding: 20px 20px 20px 20px;
+    padding: 64px 20px 20px 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -21,7 +21,7 @@ const StyledSection = styled.section`
 `
 
 const HeroTitle = styled.h1`
-    margin: 0px 0px 32px 0px;
+    margin: 0px 0px 48px 0px;
     grid-column: 1 / 13;
     font-style: normal;
     font-weight: 700;
@@ -75,7 +75,7 @@ const HeroBody =  styled.h3`
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-    color: #586165;
+    color: #505F66;
     // border: 1px dashed green;
 
     & > span {
@@ -91,7 +91,7 @@ const HeroBody =  styled.h3`
 
     @media (min-width: 1024px) {
         margin-top: 4px;
-        grid-column: 3 / 11;
+        grid-column: 4 / 10;
     }
 `
 
@@ -105,6 +105,7 @@ const HeroBody2 = styled.p`
     text-align: center;
     text-transform: uppercase;
     color: #586165;
+    color: #323C40;
     // border: 1px dashed green;
 
     @media (min-width: 1024px) {
@@ -118,7 +119,7 @@ export default function HeroSection() {
     <StyledSection>
         <HeroTitle>Howdy! 👋</HeroTitle>
         <HeroSubtitle>Folks call me Stedman.</HeroSubtitle>
-        <HeroBody>I find user centered solutions for digital experiences as a <span>UX Designer</span>. I make it real as a <span>Fullstack Developer</span>.</HeroBody>
+        <HeroBody>I find user centered solutions for digital experiences as a <span>UX Designer</span>. And make it real as a <span>Fullstack Developer</span>.</HeroBody>
         <HeroBody2>Check out my projects below!</HeroBody2>
     </StyledSection>
   )

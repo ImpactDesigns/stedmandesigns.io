@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import DemoCard from '../demoCard/DemoCard'
 
 const StyledSection = styled.section`
-    padding: 20px 20px 20px 20px;
+    padding: 4px 20px 20px 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
