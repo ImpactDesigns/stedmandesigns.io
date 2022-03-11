@@ -19,6 +19,7 @@ const CardContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
+    position: relative;
     padding: 72px 20px 72px 20px;
     background: ${props => props.backgroundColor};
     border-radius: 4px;
@@ -124,11 +125,15 @@ export default function DemoCard(props) {
 
     return (
         <CardContainer onMouseOver={() => handleMouseEnter(isCardHovered, setIsCardHovered)} onMouseLeave={() => handleMouseOut(isCardHovered, setIsCardHovered)} >
-            <HiddenLayer display={display}>
+            {/* <HiddenLayer display={display}>
                 <HiddenTitle>Project Title</HiddenTitle>
                 <HiddenBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</HiddenBody>
-            </HiddenLayer>
+            </HiddenLayer> */}
             <ImageContainer backgroundColor={color}>
+                <HiddenLayer display={display}>
+                    <HiddenTitle>Project Title</HiddenTitle>
+                    <HiddenBody>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper consectetur sit erat ornare augue. Egestas sed cursus nisl quis.</HiddenBody>
+                </HiddenLayer>
                 <img src={mobileDesktopSceneImg} alt={'Preview of Rocket Auction platform on a screen.'} />
             </ImageContainer>
 
