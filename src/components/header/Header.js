@@ -13,6 +13,10 @@ const StyledHeader = styled.header`
   align-items: center;
   // border: 1px solid lightcoral;
 
+  & > a > h5:hover {
+    color: #93DE4E;
+  }
+
   @media (min-width: 768px) {
     padding-left: 80px;
     padding-right: 80px;
