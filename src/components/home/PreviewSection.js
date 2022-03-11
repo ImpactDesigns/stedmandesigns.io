@@ -19,7 +19,7 @@ const StyledSection = styled.section`
 
     @media (min-width: 1024px) {
         gap: 40px;
-        padding-top: 80px;
+        padding-top: 40px;
         padding-left: 144px;
         padding-right: 144px;
     }
@@ -28,10 +28,10 @@ const StyledSection = styled.section`
 export default function PreviewSection() {
   return (
     <StyledSection>
-       <DemoCard color={'rgba(255, 189, 153, 0.6)'} />
-       <DemoCard color={'rgba(205, 206, 250, 0.6)'} />
-       <DemoCard color={'rgba(205, 206, 250, 0.6)'} />
-       <DemoCard color={'rgba(255, 189, 153, 0.6)'} />
+       <DemoCard color={'#E9EFF5'} />
+       <DemoCard color={'#F5EDE9'} />
+       <DemoCard color={'#F5EDE9'} />
+       <DemoCard color={'#E9EFF5'} />
     </StyledSection>
   )
 }

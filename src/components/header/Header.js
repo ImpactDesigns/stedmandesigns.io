@@ -28,6 +28,7 @@ const NameText = styled.h5`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #242B2E;
   // border: 1px dashed green;
 `
 
@@ -58,7 +59,7 @@ const LinksList = styled.ul`
   }
 
   & > li > a {
-    color: #586165;
+    color: #505F66;
     text-decoration: none;
   }
 
