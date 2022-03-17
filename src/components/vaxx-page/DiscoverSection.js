@@ -20,6 +20,14 @@ const SectionTitleWrapper = styled.div`
     margin-bottom: 72px;
     grid-column: 1 / 13;
     border: 2px solid dodgerblue;
+
+    @media (min-width: 768px) {
+        grid-column: 3 / 11;
+    }
+
+    @media (min-width: 1024px) {
+        grid-column: 4 / 10;
+    }
 `
 
 const SectionTitle = styled.h2`
@@ -31,6 +39,11 @@ const SectionTitle = styled.h2`
     text-align: center;
     color: #232323;
     border: 1px dashed green;
+
+    @media (min-width: 1024px) {
+        font-size: 40px;
+        line-height: 44px;
+    }
 `
 
 const SectionSubtitle = styled.h3`
@@ -42,11 +55,29 @@ const SectionSubtitle = styled.h3`
     text-align: center;
     color: #434343;
     border: 1px dashed green;
+
+    @media (min-width: 1024px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
 `
 
 const ContentWrapper = styled.div`
+    margin-bottom: 72px;
     grid-column: 1 / 13;
     border: 2px solid dodgerblue;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    @media (min-width: 768px) {
+        grid-column: 3 / 11;
+    }
+
+    @media (min-width: 1024px) {
+        grid-column: 4 / 10;
+    }
 `
 
 const ContentHeadingText = styled.h4`
@@ -59,6 +90,11 @@ const ContentHeadingText = styled.h4`
     text-transform: uppercase;
     color: #434343;
     border: 1px dashed green;
+
+    @media (min-width: 1024px) {
+        font-size: 18px;
+        line-height: 20px;
+    }
 `
 
 const ContentBodyText = styled.p`
@@ -70,16 +106,30 @@ const ContentBodyText = styled.p`
     text-align: center; 
     color: #434343;
     border: 1px dashed green;
+
+    @media (min-width: 1024px) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 `
 
 const ImageWrapper = styled.div`
     margin-top: 20px;
     border: 1px solid red;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 const ContentImage = styled.img`
     width: 100%;
     border: 1px dashed green;
+
+    @media (min-width: 1024px) {
+        width: 60%;
+    }
 `
 
 export default function DiscoverSection() {
