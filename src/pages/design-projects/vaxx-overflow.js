@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import { HeroSection, 
         OverviewSection,
-        DiscoverSection 
+        DiscoverSection,
+        DevelopSection 
 } from '../../components/vaxx-page'
 
 export default function VaxxOverflowProjectPage() {
@@ -12,6 +13,7 @@ export default function VaxxOverflowProjectPage() {
             <HeroSection />
             <OverviewSection />
             <DiscoverSection />
+            <DevelopSection />
         </Layout>
     </div>
   )
