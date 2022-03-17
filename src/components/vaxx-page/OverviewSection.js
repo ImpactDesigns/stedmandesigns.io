@@ -6,7 +6,6 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    border: 2px solid orange;
 
     @media (min-width: 1024px) {
         padding-top: 80px;
@@ -16,7 +15,6 @@ const StyledSection = styled.section`
 
 const TextWrapper = styled.div`
     grid-column: 1 / 13;
-    border: 2px solid dodgerblue;
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
@@ -29,14 +27,12 @@ const TextWrapper = styled.div`
 
 const SectionTitle = styled.h2`
     margin: 0px;
-    // grid-column: 1 / 13;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 32px;
     text-align: center;
     color: #242424;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 40px;
@@ -46,14 +42,12 @@ const SectionTitle = styled.h2`
 
 const SectionSubtitle = styled.h3`
     margin: 12px 0px 0px 0px;
-    // grid-column: 1 / 13;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     text-align: center;
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 20px;
@@ -63,14 +57,12 @@ const SectionSubtitle = styled.h3`
 
 const SectionHeadingText = styled.h4`
     margin: 48px 0px 0px 0px;
-    // grid-column: 1 / 13;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 18px;
@@ -80,14 +72,12 @@ const SectionHeadingText = styled.h4`
 
 const SectionBodyText = styled.p`
     margin: 8px 0px 0px 0px;
-    // grid-column: 1 / 13;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 16px;
