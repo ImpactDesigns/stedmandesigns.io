@@ -7,7 +7,6 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    // border: 2px solid orange;
 
     @media (min-width: 1024px) {
         padding-top: 80px;
@@ -17,7 +16,6 @@ const StyledSection = styled.section`
 const TextWrapper = styled.div`
     margin-bottom: 60px;
     grid-column: 1 / 13;
-    // border: 2px solid dodgerblue;
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
@@ -36,7 +34,6 @@ const HeroTitle = styled.h1`
     line-height: 44px;
     text-align: center;
     color: #242424;
-    // border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 56px;
@@ -53,7 +50,6 @@ const HeroSubtitle = styled.h3`
     line-height: 20px;
     text-align: center;
     color: #434343;
-    // border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 24px;
@@ -66,7 +62,6 @@ const ImageWrapper = styled.div`
     grid-column: 1 / 13;
     display: flex;
     justify-content: center;
-    // border: 1px solid dodgerblue;
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
@@ -78,11 +73,10 @@ const ImageWrapper = styled.div`
 `
 
 const HeroImage = styled.img`
-    width: 80%;
-    // border: 1px dashed green;
+    width: 40%;
 
     @media (min-width: 768px) {
-        width: 75%;
+        width: 50%;
     }
 
     @media (min-width: 1024px) {
