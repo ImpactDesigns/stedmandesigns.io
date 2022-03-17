@@ -7,7 +7,6 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;    
-    // border: 2px dashed orange;
 
     @media (min-width: 1024px) {
         padding-top: 80px;

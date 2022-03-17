@@ -7,7 +7,6 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    //   border: 2px solid orange;
 
     @media (min-width: 768px) {
         padding: 0px 80px 0px 80px;
@@ -24,7 +23,6 @@ const Form = styled.form`
     margin: 0px;
     padding: 20px 0px 20px 0px;
     grid-column: 1 / 13;
-    // border: 2px solid dodgerblue;
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
@@ -47,7 +45,6 @@ const Label = styled.label`
     font-size: 16px;
     line-height: 24px;
     color: #586165;
-    // border: 1px dashed green;
 `
 
 const Textarea = styled.textarea`
@@ -72,7 +69,6 @@ const Textarea = styled.textarea`
 const StyledLabel = styled(Label)`
     margin-top: 32px;
     margin-bottom: 16px;
-    // border: 1px dashed green;
 `
 
 const StyledButton = styled.button`
