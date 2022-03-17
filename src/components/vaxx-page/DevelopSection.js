@@ -7,19 +7,17 @@ const StyledSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;    
-    border: 2px dashed orange;
+    // border: 2px dashed orange;
 
-    // @media (min-width: 1024px) {
-    //     padding-top: 80px;
-    //     padding-bottom: 80px;
-    // }
+    @media (min-width: 1024px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 `
 
 const SectionTitleWrapper = styled.div`
     margin-bottom: 72px;
     grid-column: 1 / 13;
-    border: 2px solid dodgerblue;
-
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
@@ -38,7 +36,6 @@ const SectionTitle = styled.h2`
     line-height: 32px;
     text-align: center;
     color: #232323;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 40px;
@@ -54,7 +51,6 @@ const SectionSubtitle = styled.h3`
     line-height: 18px;
     text-align: center;
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 20px;
@@ -65,7 +61,6 @@ const SectionSubtitle = styled.h3`
 const ContentWrapper = styled.div`
     margin-bottom: 72px;
     grid-column: 1 / 13;
-    border: 2px solid dodgerblue;
 
     &:last-child {
         margin-bottom: 0px;
@@ -89,7 +84,6 @@ const ContentHeadingText = styled.h4`
     text-align: center;
     text-transform: uppercase;
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 18px;
@@ -105,7 +99,6 @@ const ContentBodyText = styled.p`
     line-height: 18px;
     text-align: center; 
     color: #434343;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         font-size: 16px;
@@ -115,7 +108,6 @@ const ContentBodyText = styled.p`
 
 const ImageWrapper = styled.div`
     margin-top: 20px;
-    border: 1px solid red;
 
     @media (min-width: 1024px) {
         display: flex;
@@ -125,7 +117,6 @@ const ImageWrapper = styled.div`
 
 const ContentImage = styled.img`
     width: 100%;
-    border: 1px dashed green;
 
     @media (min-width: 1024px) {
         width: 60%;
