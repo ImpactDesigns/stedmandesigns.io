@@ -8,7 +8,8 @@ export const Default = {
     children: (
       <div style={{ border: '1px solid orange', gridColumn: 'span 12' }}>
         <div>
-          <p>Hello</p>
+          <h1 style={{ margin: '0px' }}>Hello world</h1>
+          <h3 style={{ margin: '0px' }}>Just testing this out</h3>
         </div>
       </div>
     )
@@ -17,7 +18,8 @@ export const Default = {
 
 const meta = {
   title: 'Components/Shared/Section',
-  component: Section
+  component: Section,
+  tags: ['autodocs']
 }
 
 export default meta
