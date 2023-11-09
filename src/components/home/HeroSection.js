@@ -1,23 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Section } from '../shared/Section'
 
-const StyledSection = styled.section`
-    padding: 64px 20px 20px 20px;
+const StyledSection = styled(Section)`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    // border: 2px solid orange;
-
-    @media (min-width: 768px) {
-        padding: 20px 80px 20px 80px;
-    }
-
-    @media (min-width: 1024px) {
-        padding-top: 80px;
-        padding-left: 144px;
-        padding-right: 144px;
-        padding-bottom: 4px;
-    }
 `
 
 const HeroTitle = styled.h1`
@@ -30,7 +18,6 @@ const HeroTitle = styled.h1`
     text-align: center;
     // color: rgba(88, 97, 101, 0.8);
     color: #323C40;
-    // border: 1px dashed green;
 
     @media (min-width: 768px) {
         font-weight: 700;
@@ -54,16 +41,11 @@ const HeroSubtitle = styled.h2`
     text-align: center;
     // color: #586165;
     color: #737C80;
-    // border: 1px dashed green;
 
     @media (min-width: 768px) {
         grid-column: 3 / 11;
         font-size: 28px;
         line-height: 32px;
-    }
-
-    @media (min-width: 1024px) {
-
     }
 `
 
@@ -76,17 +58,14 @@ const HeroBody =  styled.h3`
     line-height: 20px;
     text-align: center;
     color: #505F66;
-    // border: 1px dashed green;
 
     & > span {
         color: #E0875A;
         font-weight: 500;
-        // border-bottom: 1px solid #FFBD99;
     }
 
     & > span:nth-child(2) {
         color: #5A98E0;
-        // border-bottom: 1px solid #CDCEFA;
     }
 
     @media (min-width: 1024px) {
@@ -106,7 +85,6 @@ const HeroBody2 = styled.p`
     text-transform: uppercase;
     color: #586165;
     color: #323C40;
-    // border: 1px dashed green;
 
     @media (min-width: 1024px) {
         margin-top: 120px;
