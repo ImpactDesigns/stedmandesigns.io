@@ -1,27 +1,23 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const StyledSection = styled.section`
   border: 2px solid hotpink;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 768px) {
-      padding: 0px 80px 0px 80px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: 1024px) {
-      padding-top: 80px;
-      padding-bottom: 80px;
-      padding-left: 144px;
-      padding-right: 144px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
-`
+`;
 
-export default function Section({ children }) {
-  return (
-    <StyledSection>{children}</StyledSection>
-  )
+export default function Section({ children, className }) {
+  return <StyledSection className={className}>{children}</StyledSection>;
 }
