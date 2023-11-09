@@ -2,8 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Section } from '../shared/Section'
 
+const StyledSection = styled(Section)`
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+`
+
 const HeroTitle = styled.h1`
     margin: 0px 0px 48px 0px;
+    grid-column: 1 / 13;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -20,11 +27,13 @@ const HeroTitle = styled.h1`
 
     @media (min-width: 1024px) {
         margin-bottom: 48px;
+        grid-column: 3 / 11;
     }
 `
 
 const HeroSubtitle = styled.h2`
     margin: 0px 0px 4px 0px;
+    grid-column: 1 / 13;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -34,17 +43,15 @@ const HeroSubtitle = styled.h2`
     color: #737C80;
 
     @media (min-width: 768px) {
+        grid-column: 3 / 11;
         font-size: 28px;
         line-height: 32px;
-    }
-
-    @media (min-width: 1024px) {
-
     }
 `
 
 const HeroBody =  styled.h3`
     margin: 0px;
+    grid-column: 1 / 13;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -55,21 +62,21 @@ const HeroBody =  styled.h3`
     & > span {
         color: #E0875A;
         font-weight: 500;
-        // border-bottom: 1px solid #FFBD99;
     }
 
     & > span:nth-child(2) {
         color: #5A98E0;
-        // border-bottom: 1px solid #CDCEFA;
     }
 
     @media (min-width: 1024px) {
         margin-top: 4px;
+        grid-column: 4 / 10;
     }
 `
 
 const HeroBody2 = styled.p`
     margin: 56px 0px 0px 0px;
+    grid-column: 1 / 13;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -87,11 +94,11 @@ const HeroBody2 = styled.p`
 
 export default function HeroSection() {
   return (
-    <Section>
+    <StyledSection>
         <HeroTitle>Howdy! 👋</HeroTitle>
         <HeroSubtitle>Folks call me Stedman.</HeroSubtitle>
         <HeroBody>I find user centered solutions for digital experiences as a <span>UX Designer</span>. And make it real as a <span>Fullstack Developer</span>.</HeroBody>
         <HeroBody2>Check out my projects below!</HeroBody2>
-    </Section>
+    </StyledSection>
   )
 }

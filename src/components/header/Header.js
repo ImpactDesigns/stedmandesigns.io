@@ -11,20 +11,19 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // border: 1px solid lightcoral;
 
   & > a > h5:hover {
     color: #93DE4E;
   }
 
   @media (min-width: 768px) {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: 1024px) {
-    padding-left: 144px;
-    padding-right: 144px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 `
 

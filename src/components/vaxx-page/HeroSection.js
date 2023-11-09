@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Section } from '../shared/Section/'
 import heroImage from '../../images/project-vaxx-screen-360px-1.5x.jpg'
 
-const StyledSection = styled.section`
+const StyledSection = styled(Section)`
     padding: 40px 20px 40px 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);

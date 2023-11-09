@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSection = styled.section`
-  border: 2px solid hotpink;
   padding: 20px;
   display: flex;
   flex-direction: column;

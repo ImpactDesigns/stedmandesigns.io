@@ -6,10 +6,15 @@ import mobileDesktopSceneImg from '../../images/desktop-sm-x2.png'
 const CardContainer = styled.div`
     position: relative;
     margin-bottom: 48px;
-    grid-column: 2 / 12;
+    grid-column: 1 / 13;
+
+    @media (min-width: 768px) {
+        grid-column: span 6;
+        margin-bottom: 0px;
+    }
 
     @media (min-width: 1024px) {
-        grid-column: span 6;
+        grid-column: span 4;
         margin-bottom: 0px;
     }
 `
