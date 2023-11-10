@@ -1,54 +1,79 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter project
-</h1>
+<a name="top">
 
-## 🚀 Quick start
+# stedman.io
 
-1.  **Create a Gatsby site.**
+Just my portfolio to demonstrate my coding and design projects.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Table of contents
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+<ul>
+  <li><a href="#be-ubiquitous">About the project</a></li>
+  <li>
+    <a href="#dev-environment-setup">Dev environment setup</a>
+    <ul>
+      <li>
+        <a href="#clone-the-repo">Clone the repo</a>
+      </li>
+      <li>
+        <a href="#install-dependencies">Install dependencies</a>
+      </li>
+      <li>
+        <a href="#develop-with-storybook">Develop with Storybook</a>
+      </li>
+      <li>
+        <a href="#gatsby-development-server">Gatsby development server</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
 
-2.  **Start developing.**
+## Dev environment setup
 
-    Navigate into your new site’s directory and start it up.
+This project uses Gatsby to build static pages. Follow instuctions below.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+<!-- <p align="right"><a href="#top">Back to top</a></p> -->
 
-3.  **Open the code and start customizing!**
+### Clone the repo
 
-    Your site is now running at http://localhost:8000!
+Clone the repo from Github.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```
+gh repo clone ImpactDesigns/stedmandesigns.io
+```
 
-4.  **Learn more**
+<p align="right"><a href="#top">Back to top</a></p>
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Install dependencies
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Install the project dependencies from NPM.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+npm install
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<p align="right"><a href="#top">Back to top</a></p>
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Develop with Storybook
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+This project uses Storybook for developing reusable React components in isolation, and for component documentation. Run the command below.
 
-## 🚀 Quick start (Gatsby Cloud)
+```
+npm run storybook
+```
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+Then open your browser to [http://localhost:6006/?path=/docs/components-shared-section--docs](http://localhost:6006/?path=/docs/components-shared-section--docs).
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+<p align="right"><a href="#top">Back to top</a></p>
+
+### Gatsby development server
+
+```
+npm run start
+```
+
+<p align="right"><a href="#top">Back to top</a></p>
+
+## Acknowledgments
+
+<p align="right"><a href="#top">Back to top</a></p>
