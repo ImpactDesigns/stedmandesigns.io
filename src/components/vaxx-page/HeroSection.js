@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Section } from '../shared/Section/'
+import { Section } from '../../components'
 import heroImage from '../../images/project-vaxx-screen-360px-1.5x.jpg'
 
 const StyledSection = styled(Section)`
