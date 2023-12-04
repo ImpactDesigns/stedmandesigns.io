@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
-import { Section } from "../..";
-import { Card, Button } from "../../../components";
-import mobileDesktopSceneImg from '../../../images/desktop-sm-x2.png'
-import projectsList from "../../../assets/projectsList";
+import { Section } from "../../..";
+import { Card, Button } from "../../..";
+// import mobileDesktopSceneImg from '../../../images/desktop-sm-x2.png'
+import projectsList from "../../../../assets/projectsList";
 
 const StyledSection = styled(Section)`
   position: relative;
@@ -89,7 +89,7 @@ export default function PreviewSection() {
               >
                 <CardDescription>{project.description}</CardDescription>
               </div>
-              <Button onclick={() => navigate(project.projectPath)} label="View project" isFullWidth={true}></Button>
+              <Button buttonStyle="secondary" onclick={() => navigate(project.projectPath)} label="View project" isFullWidth={true}></Button>
             </div>
           </Card>
         </Wrapper>
