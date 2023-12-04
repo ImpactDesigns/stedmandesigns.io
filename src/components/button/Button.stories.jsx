@@ -4,84 +4,73 @@ import Button from "./Button";
 /**
  * Button used for a primary call to action.
  */
-export const Primary = {
-  render: args => <Button {...args} />,
+export const Default = {
+  render: (args) => <Button {...args} />,
   args: {
-    label: 'Button',
-    id: 'testing-id',
-    buttonStyle: 'primary'
+    label: "Button",
+    id: "testing-id",
+    buttonStyle: "primary",
+    classname: 'default-button',
+    isFullWidth: false,
+    disabled: false,
+    onclick: () => alert('Clicked')
   },
   decorators: [
-    ButtonStory => (
-      <div style={{ width: '240px', border: '1px solid orange' }}>
+    (ButtonStory) => (
+      <div style={{ width: "240px" }}>
         <ButtonStory />
       </div>
-    )
-  ]
-}
+    ),
+  ],
+};
 
-/**
- * Button used for a secondary call to action.
- */
-export const Secondary = {
-  render: args => <Button {...args} />,
+export const FullWidth = {
+  render: (args) => <Button {...args} />,
   args: {
-    label: 'Button',
-    id: 'testing-id',
-    buttonStyle: 'secondary'
+    label: "Button",
+    id: "testing-id",
+    buttonStyle: "primary",
+    classname: 'full-width-button',
+    isFullWidth: true,
+    disabled: false,
+    onclick: () => alert('Clicked')
   },
   decorators: [
-    ButtonStory => (
-      <div style={{ width: '240px', border: '1px solid orange' }}>
+    (ButtonStory) => (
+      <div style={{ width: "240px" }}>
         <ButtonStory />
       </div>
-    )
-  ]
-}
-
-/**
- * Button used for a tertiary call to action. Lowest level of importance.
- */
-export const Text = {
-  render: args => <Button {...args} />,
-  args: {
-    label: 'Button',
-    id: 'testing-id',
-    buttonStyle: 'text'
-  },
-  decorators: [
-    ButtonStory => (
-      <div style={{ width: '240px', border: '1px solid orange' }}>
-        <ButtonStory />
-      </div>
-    )
-  ]
-}
+    ),
+  ],
+};
 
 /**
  * Disabled the button interactivity.
  */
 export const Disabled = {
-  render: args => <Button {...args} />,
+  render: (args) => <Button {...args} />,
   args: {
-    label: 'Button',
-    id: 'testing-id',
-    buttonStyle: 'primary',
-    disabled: true
+    label: "Button",
+    id: "testing-id",
+    buttonStyle: "primary",
+    classname: 'disabled-button',
+    isFullWidth: false,
+    disabled: true,
+    onclick: () => alert('Clicked')
   },
   decorators: [
-    ButtonStory => (
-      <div style={{ width: '240px', border: '1px solid orange' }}>
+    (ButtonStory) => (
+      <div style={{ width: "240px" }}>
         <ButtonStory />
       </div>
-    )
-  ]
-}
+    ),
+  ],
+};
 
 const meta = {
   title: "Components/Shared/Button",
   component: Button,
-  tags: ['autodocs']
+  tags: ["autodocs"],
 };
 
-export default meta
+export default meta;
