@@ -4,6 +4,7 @@ import { navigate } from "gatsby";
 import { Section } from "../../..";
 import { Card, Button } from "../../..";
 import CardImage from "./CardImage";
+import ProjectLinks from "./ProjectLinks";
 import projectsList from "../../../../assets/projectsList";
 
 const StyledSection = styled(Section)`
@@ -55,6 +56,7 @@ const CardTitle = styled("h4")`
 `;
 
 const CardDescription = styled("p")`
+  margin: 0px 0px 0px 0px;
   position: relative;
   box-sizing: border-box;
   position: relative;
@@ -63,10 +65,7 @@ const CardDescription = styled("p")`
   color: #586165;
   font-size: 16px;
   line-height: 24px;
-  margin: 0px 0px 0px 0px;
 `;
-
-
 
 export default function PreviewSection() {
   return (
@@ -82,14 +81,14 @@ export default function PreviewSection() {
                 style={{
                   boxSizing: "border-box",
                   position: "relative",
-                  maxWidth: "100%",
+                  margin: "0px 0px 16px 0px",
                   maxHeight: "96px",
                   overflow: "hidden",
-                  marginBottom: "24px",
                 }}
               >
                 <CardDescription>{project.description}</CardDescription>
               </div>
+              <ProjectLinks links={project.projectLinks} />
               <Button
                 buttonStyle="secondary"
                 onclick={() => navigate(project.projectPath)}

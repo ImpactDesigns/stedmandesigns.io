@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const StyledSection = styled.section`
   padding: 20px;
@@ -22,7 +22,7 @@ export default function Section({ children, className }) {
   return <StyledSection className={className}>{children}</StyledSection>;
 }
 
-Section.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  className: PropTypes.string
-}
+// Section.propTypes = {
+//   children: PropTypes.arrayOf(PropTypes.element).isRequired,
+//   className: PropTypes.string
+// }

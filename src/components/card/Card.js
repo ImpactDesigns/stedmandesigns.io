@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 const CardContainer = styled("div")`
   position: relative;
@@ -13,7 +13,7 @@ const CardContainer = styled("div")`
 `;
 
 export default function Card({ id, className, children, ...otherProps }) {
-  const cardId = id ? `card-${id}` : null
+  const cardId = id ? `card-${id}` : null;
 
   return (
     <CardContainer id={cardId} className={className} {...otherProps}>
@@ -22,8 +22,8 @@ export default function Card({ id, className, children, ...otherProps }) {
   );
 }
 
-Card.propTypes = {
-  children: PropTypes.oneOf([PropTypes.node, PropTypes.element]).isRequired,
-  className: PropTypes.string,
-  id: PropTypes.string,
-};
+// Card.propTypes = {
+//   children: PropTypes.oneOf([PropTypes.node, PropTypes.element]).isRequired,
+//   className: PropTypes.string,
+//   id: PropTypes.string,
+// };

@@ -14,13 +14,11 @@ export const Default = {
 
 const gridContainerStyles = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(12, 1fr)',
-  // border: '2px solid black'
+  gridTemplateColumns: 'repeat(12, 1fr)'
 }
 
 const wrapperStyles = {
-  gridColumn: '1 / 5',
-  // background: 'lightgreen'
+  gridColumn: '1 / 5'
 }
 
 const meta = {

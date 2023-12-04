@@ -5,9 +5,22 @@ const projectsList = [
     title: "Project one",
     previewImage: mobileDesktopSceneImg,
     description:
-      "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
+      "Lorem ipsum dolor sit amet. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
     projectPath: "/design-projects/vaxx-overflow",
-    color: "#E9EFF5",
+    projectLinks: [
+      {
+        label: "Live",
+        path: "http://www.github.com",
+      },
+      {
+        label: "Github",
+        path: "http://www.github.com",
+      },
+      {
+        label: "Figma",
+        path: "https://www.figma.com/file/YGwZ3yWfASh9zgcn3MSxGK/v2?type=design&node-id=23%3A5275&mode=design&t=egRCrqIzmNs7JbMP-1",
+      },
+    ],
   },
   {
     title: "Project two",
@@ -15,7 +28,20 @@ const projectsList = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
     projectPath: "/design-projects/vaxx-overflow",
-    color: "#F5EDE9",
+    projectLinks: [
+      {
+        label: "Live",
+        path: "http://www.github.com",
+      },
+      {
+        label: "Github",
+        path: "http://www.github.com",
+      },
+      // {
+      //   label: 'Figma',
+      //   path: 'http://www.github.com'
+      // }
+    ],
   },
   {
     title: "Project three",
@@ -23,7 +49,20 @@ const projectsList = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
     projectPath: "/design-projects/vaxx-overflow",
-    color: "#F5EDE9",
+    projectLinks: [
+      // {
+      //   label: 'Live',
+      //   path: 'http://www.github.com'
+      // },
+      {
+        label: "Github",
+        path: "http://www.github.com",
+      },
+      {
+        label: "Figma",
+        path: "http://www.github.com",
+      },
+    ],
   },
   {
     title: "Project four",
@@ -31,7 +70,20 @@ const projectsList = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
     projectPath: "/design-projects/vaxx-overflow",
-    color: "#F5EDE9",
+    projectLinks: [
+      // {
+      //   label: 'Live',
+      //   path: 'http://www.github.com'
+      // },
+      // {
+      //   label: 'Github',
+      //   path: 'http://www.github.com'
+      // },
+      {
+        label: "Figma",
+        path: "http://www.github.com",
+      },
+    ],
   },
 ];
 
