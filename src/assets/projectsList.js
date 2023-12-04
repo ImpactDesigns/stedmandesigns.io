@@ -10,7 +10,7 @@ const projectsList = [
     projectLinks: [
       {
         label: "Live",
-        path: "http://www.github.com",
+        path: "https://test-wax-breaker-proj.onrender.com",
       },
       {
         label: "Github",
