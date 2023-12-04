@@ -4,7 +4,7 @@ import { HeroSection,
         OverviewSection,
         DiscoverSection,
         DevelopSection 
-} from '../../components/vaxx-page'
+} from '../../components/pageComponents/vaxx-page'
 
 export default function VaxxOverflowProjectPage() {
   return (

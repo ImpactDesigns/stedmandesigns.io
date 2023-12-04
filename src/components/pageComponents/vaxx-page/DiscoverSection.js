@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Section } from '../../components'
-import problemStatementsImg from "../../images/project-vaxx-define-img-sm-1.5x.png";
-import competitiveImg from "../../images/project-vaxx-comp-img-sm-1.5x.png";
+import { Section } from '../../../components'
+import problemStatementsImg from "../../../images/project-vaxx-define-img-sm-1.5x.png";
+import competitiveImg from "../../../images/project-vaxx-comp-img-sm-1.5x.png";
 
 const StyledSection = styled(Section)`
   padding: 40px 20px 40px 20px;
