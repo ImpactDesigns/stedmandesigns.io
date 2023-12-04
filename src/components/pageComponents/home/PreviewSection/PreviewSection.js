@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { navigate } from "gatsby";
 import { Section } from "../../..";
 import { Card, Button } from "../../..";
-// import mobileDesktopSceneImg from '../../../images/desktop-sm-x2.png'
+import CardImage from "./CardImage";
 import projectsList from "../../../../assets/projectsList";
 
 const StyledSection = styled(Section)`
@@ -37,7 +37,17 @@ const Wrapper = styled("div")`
   }
 `;
 
-const CardTitle = styled("h3")`
+const H5 = styled("h4")`
+  margin: 0px;
+  position: relative;
+  box-sizing: border-box;
+  grid-column: span 12;
+  font-size: 24px;
+  line-height: 28px;
+  color: #586165;
+`;
+
+const CardTitle = styled("h4")`
   position: relative;
   box-sizing: border-box;
   color: #586165;
@@ -47,6 +57,8 @@ const CardTitle = styled("h3")`
 const CardDescription = styled("p")`
   position: relative;
   box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
   display: block;
   color: #586165;
   font-size: 16px;
@@ -54,42 +66,36 @@ const CardDescription = styled("p")`
   margin: 0px 0px 0px 0px;
 `;
 
-const ImageContainer = styled('div')`
-  position: relative;
-  box-sizing: border-box;
-  margin: 0px 0px 16px 0px;
-  width: 100%;
-  height: 140px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: ${props => props.image ? `url(${props.image})` : 'lightgreen'};
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-`
+
 
 export default function PreviewSection() {
   return (
     <StyledSection>
+      <H5>My projects</H5>
       {projectsList.map((project, idx) => (
         <Wrapper key={idx}>
           <Card>
             <div>
-              <ImageContainer image={project.previewImage} />
+              <CardImage image={project.previewImage} />
               <CardTitle>{project.title}</CardTitle>
               <div
                 style={{
-                  boxSizing: 'border-box',
-                  position: 'relative',
+                  boxSizing: "border-box",
+                  position: "relative",
                   maxWidth: "100%",
                   maxHeight: "96px",
                   overflow: "hidden",
-                  marginBottom: "24px"
+                  marginBottom: "24px",
                 }}
               >
                 <CardDescription>{project.description}</CardDescription>
               </div>
-              <Button buttonStyle="secondary" onclick={() => navigate(project.projectPath)} label="View project" isFullWidth={true}></Button>
+              <Button
+                buttonStyle="secondary"
+                onclick={() => navigate(project.projectPath)}
+                label="View project"
+                isFullWidth={true}
+              ></Button>
             </div>
           </Card>
         </Wrapper>
