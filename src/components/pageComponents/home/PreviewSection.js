@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Section } from '../../components'
-import DemoCard from "../demoCard/DemoCard";
+import { Section } from '../..'
+import DemoCard from "../../demoCard/DemoCard";
 
 const StyledSection = styled(Section)`
   display: grid;
