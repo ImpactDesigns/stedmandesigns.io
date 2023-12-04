@@ -13,8 +13,8 @@ const StyledSection = styled.section`
   }
 
   @media (min-width: 1024px) {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 `;
 
