@@ -42,7 +42,7 @@ const HeroSubtitle = styled.h2`
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: #737c80;
+  color: rgba(88, 97, 101, .8);
 
   @media (min-width: 576px) {
     grid-column: 1 / 9;
