@@ -1,4 +1,5 @@
 import mobileDesktopSceneImg from "../images/desktop-sm-x2.png";
+import boxMoverDemoImage from "../images/box-mover-demo.jpg";
 
 const projectsList = [
   {
@@ -24,8 +25,9 @@ const projectsList = [
   },
   {
     title: "BoxMover",
-    // previewImage: mobileDesktopSceneImg,
-    description: "A small project to test out Zustand state management. Move the highlighted box by using for directions.", 
+    previewImage: boxMoverDemoImage,
+    description:
+      "A small project to test out Zustand state management. Move the highlighted box by using for directions.",
     projectPath: "/dev-projects/box-mover",
     projectLinks: [
       {
@@ -35,9 +37,9 @@ const projectsList = [
       {
         label: "Github",
         path: "https://github.com/recon-designs-practice/box-mover",
-      }
+      },
     ],
-  }
+  },
 ];
 
 export default projectsList;
