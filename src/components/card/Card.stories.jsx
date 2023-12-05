@@ -1,6 +1,9 @@
 import React from 'react'
 import Card from './Card'
 
+/**
+ * Story description.
+ */
 export const Default = {
   render: args => <Card {...args} />,
   args: {

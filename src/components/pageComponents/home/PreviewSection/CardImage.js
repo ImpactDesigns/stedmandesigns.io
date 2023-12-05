@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const ImageContainer = styled("div")`
   position: relative;
@@ -21,7 +21,7 @@ export default function CardImage({ className, image, ...otherProps }) {
   return <ImageContainer image={image} className={className} {...otherProps} />;
 }
 
-// CardImage.propTypes = {
-//   image: PropTypes.string.isRequired,
-//   className: PropTypes.string,
-// };
+CardImage.propTypes = {
+  image: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};

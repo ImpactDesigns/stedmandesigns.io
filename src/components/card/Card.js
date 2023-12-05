@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const CardContainer = styled("div")`
   position: relative;
@@ -22,8 +22,8 @@ export default function Card({ id, className, children, ...otherProps }) {
   );
 }
 
-// Card.propTypes = {
-//   children: PropTypes.oneOf([PropTypes.node, PropTypes.element]).isRequired,
-//   className: PropTypes.string,
-//   id: PropTypes.string,
-// };
+Card.propTypes = {
+  children: PropTypes.element,
+  className: PropTypes.string,
+  id: PropTypes.string,
+};
