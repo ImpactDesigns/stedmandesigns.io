@@ -40,6 +40,10 @@ const Wrapper = styled("div")`
   @media (min-width: 1200px) {
     grid-column: span 4;
   }
+
+  @media (min-width: 1600px) {
+    grid-column: span 3;
+  }
 `;
 
 const H5 = styled("h4")`
