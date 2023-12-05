@@ -14,6 +14,9 @@ Just my portfolio to demonstrate my coding and design projects.
       <li>
         <a href="#clone-the-repo">Clone the repo</a>
       </li>
+            <li>
+        <a href="#node-requirements">Node requirements</a>
+      </li>
       <li>
         <a href="#install-dependencies">Install dependencies</a>
       </li>
@@ -42,6 +45,16 @@ Clone the repo from Github.
 gh repo clone ImpactDesigns/stedmandesigns.io
 ```
 
+<p align="right"><a href="#top">Back to top</a></p>
+
+### Node requirements
+
+Before installing the dependency packages, make sure you are using **Node ```v16.20.2```** or earlier.
+```
+nvm list
+nvm install v16.20.2
+nvm use v16.20.2
+```
 <p align="right"><a href="#top">Back to top</a></p>
 
 ### Install dependencies

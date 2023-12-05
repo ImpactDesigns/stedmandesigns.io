@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Section } from '../shared/Section'
-import developImg from "../../images/project-vaxx-develop-img-sm-1.5x.png";
+import { Section } from '../../../components'
+import problemStatementsImg from "../../../images/project-vaxx-define-img-sm-1.5x.png";
+import competitiveImg from "../../../images/project-vaxx-comp-img-sm-1.5x.png";
 
 const StyledSection = styled(Section)`
   padding: 40px 20px 40px 20px;
@@ -123,11 +124,11 @@ const ContentImage = styled.img`
   }
 `;
 
-export default function DevelopSection() {
+export default function DiscoverSection() {
   return (
     <StyledSection>
       <SectionTitleWrapper>
-        <SectionTitle>{"Develop & Deliver"}</SectionTitle>
+        <SectionTitle>Discover & Define</SectionTitle>
         <SectionSubtitle>
           Searching for understanding of who our users were, and what painpoints
           or motivations that we could uncover, I was able to conduct 5 user
@@ -136,24 +137,34 @@ export default function DevelopSection() {
       </SectionTitleWrapper>
 
       <ContentWrapper>
-        <ContentHeadingText>{"User flow"}</ContentHeadingText>
+        <ContentHeadingText>
+          {"Persona and Problem Statement"}
+        </ContentHeadingText>
         <ContentBodyText>
           {
             "Searching for understanding of who our users were, and what painpoints or motivations that we could uncover, I was able to conduct 5 user interviews in our short timeline."
           }
         </ContentBodyText>
         <ImageWrapper>
-          <ContentImage src={developImg} alt={"alt text"} />
+          <ContentImage src={problemStatementsImg} alt={"content image"} />
         </ImageWrapper>
       </ContentWrapper>
 
       <ContentWrapper>
-        <ContentHeadingText>{"Results"}</ContentHeadingText>
+        <ContentHeadingText>{"Competitive Analysis"}</ContentHeadingText>
         <ContentBodyText>
-          {
-            "Searching for understanding of who our users were, and what painpoints or motivations that we could uncover, I was able to conduct 5 user interviews in our short timeline."
-          }
+          Searching for understanding of who our users were, and what painpoints
+          or motivations that we could uncover, I was able to conduct 5 user
+          interviews in our short timeline.
+          <br />
+          <br />
+          Searching for understanding of who our users were, and what painpoints
+          or motivations that we could uncover, I was able to conduct 5 user
+          interviews in our short timeline.
         </ContentBodyText>
+        <ImageWrapper>
+          <ContentImage src={competitiveImg} alt={"content image"} />
+        </ImageWrapper>
       </ContentWrapper>
     </StyledSection>
   );
