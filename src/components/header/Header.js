@@ -22,8 +22,8 @@ const StyledHeader = styled.header`
   }
 
   @media (min-width: 1024px) {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 `
 
@@ -31,54 +31,51 @@ const NameText = styled.h5`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #242B2E;
-  // border: 1px dashed green;
+  color: #586165;
 `
 
 const MenuIcon = styled.img`
   width: 32px;
   cursor: pointer;
-  // border: 1px dashed green;
 
   @media (min-width: 768px) {
     display: none;
   }
 `
 
-const LinksList = styled.ul`
-  display: none;
-  padding-left: 0px;
-  // border: 2px solid orange;
+// const LinksList = styled.ul`
+//   display: none;
+//   padding-left: 0px;
 
-  & > li {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 24px;
-    color: #586165;
-    list-style: none;
-    // border: 1px dashed green;
-  }
+//   & > li {
+//     font-family: Poppins;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 15px;
+//     line-height: 24px;
+//     color: #586165;
+//     list-style: none;
+//     // border: 1px dashed green;
+//   }
 
-  & > li > a {
-    color: #505F66;
-    text-decoration: none;
-  }
+//   & > li > a {
+//     color: #505F66;
+//     text-decoration: none;
+//   }
 
-  & > li:nth-child(2) {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+//   & > li:nth-child(2) {
+//     margin-left: 40px;
+//     margin-right: 40px;
+//   }
 
-  & > li > a:hover {
-    color: #93DE4E;
-  }
+//   & > li > a:hover {
+//     color: #93DE4E;
+//   }
 
-  @media (min-width: 768px) {
-    display: flex;
-  }
-`
+//   @media (min-width: 768px) {
+//     display: flex;
+//   }
+// `
 
 export default function Header() {
   const [isFlyoutOpen, setIsFlyoutOpen] = useContext(UserContext)
