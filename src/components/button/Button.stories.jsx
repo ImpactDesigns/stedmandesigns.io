@@ -70,7 +70,7 @@ export const Disabled = {
 const meta = {
   title: "Components/Shared/Button",
   component: Button,
-  tags: ["autodocs"],
+  tags: ["autodocs"]
 };
 
 export default meta;
