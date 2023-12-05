@@ -92,11 +92,11 @@ export default function Header() {
   return (
     <StyledHeader>
       <Link to={'/'}><NameText>Stedman Designs</NameText></Link>
-      <LinksList>
-        {/* <li><Link to={'/my-work'} activeClassName={'active-link'}>Work</Link></li> */}
+      {/* <LinksList>
+        <li><Link to={'/my-work'} activeClassName={'active-link'}>Work</Link></li>
         <li><Link to={'/about-me'} activeClassName={'active-link'}>About</Link></li>
         <li><Link to={'/contact-me'} activeClassName={'active-link'}>Contact</Link></li>
-      </LinksList>
+      </LinksList> */}
       <MenuIcon 
         src={menuIcon} 
         alt={'Click to open menu'} 
