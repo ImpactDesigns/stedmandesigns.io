@@ -18,6 +18,10 @@ const StyledSection = styled(Section)`
   & > div:last-child {
     margin-bottom: 0px;
   }
+
+  @media (min-width: 1024px) {
+    gap: 32px;
+  }
 `;
 
 const Wrapper = styled("div")`
@@ -25,16 +29,16 @@ const Wrapper = styled("div")`
   box-sizing: border-box;
   grid-column: span 12;
 
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     grid-column: span 6;
   }
 
   @media (min-width: 1024px) {
-    grid-column: span 4;
+    grid-column: span 6;
   }
 
   @media (min-width: 1200px) {
-    grid-column: span 3;
+    grid-column: span 4;
   }
 `;
 
