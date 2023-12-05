@@ -22,69 +22,22 @@ const projectsList = [
       },
     ],
   },
-  // {
-  //   title: "Project two",
-  //   previewImage: mobileDesktopSceneImg,
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
-  //   projectPath: "/design-projects/vaxx-overflow",
-  //   projectLinks: [
-  //     {
-  //       label: "Live",
-  //       path: "http://www.github.com",
-  //     },
-  //     {
-  //       label: "Github",
-  //       path: "http://www.github.com",
-  //     },
-  //     // {
-  //     //   label: 'Figma',
-  //     //   path: 'http://www.github.com'
-  //     // }
-  //   ],
-  // },
-  // {
-  //   title: "Project three",
-  //   // previewImage: mobileDesktopSceneImg,
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
-  //   projectPath: "/design-projects/vaxx-overflow",
-  //   projectLinks: [
-  //     // {
-  //     //   label: 'Live',
-  //     //   path: 'http://www.github.com'
-  //     // },
-  //     {
-  //       label: "Github",
-  //       path: "http://www.github.com",
-  //     },
-  //     {
-  //       label: "Figma",
-  //       path: "http://www.github.com",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Project four",
-  //   // previewImage: mobileDesktopSceneImg,
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo. Lorem ipsum dolor sit amet consectetur. Orci amet risus neque porta donec sagittis morbi leo. Leo.",
-  //   projectPath: "/design-projects/vaxx-overflow",
-  //   projectLinks: [
-  //     // {
-  //     //   label: 'Live',
-  //     //   path: 'http://www.github.com'
-  //     // },
-  //     // {
-  //     //   label: 'Github',
-  //     //   path: 'http://www.github.com'
-  //     // },
-  //     {
-  //       label: "Figma",
-  //       path: "http://www.github.com",
-  //     },
-  //   ],
-  // },
+  {
+    title: "BoxMover",
+    // previewImage: mobileDesktopSceneImg,
+    description: "A small project to test out Zustand state management. Move the highlighted box by using for directions.", 
+    projectPath: "/dev-projects/box-mover",
+    projectLinks: [
+      {
+        label: "Live",
+        path: "https://steadys-projs-boxmover.netlify.app/",
+      },
+      {
+        label: "Github",
+        path: "https://github.com/recon-designs-practice/box-mover",
+      }
+    ],
+  }
 ];
 
 export default projectsList;

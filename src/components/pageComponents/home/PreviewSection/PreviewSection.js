@@ -92,6 +92,7 @@ export default function PreviewSection() {
                   boxSizing: "border-box",
                   position: "relative",
                   margin: "0px 0px 16px 0px",
+                  height: "80px",
                   maxHeight: "80px",
                   overflow: "hidden",
                 }}
