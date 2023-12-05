@@ -66,9 +66,11 @@ const CardDescription = styled("p")`
   position: relative;
   box-sizing: border-box;
   display: block;
+  font-weight: 400;
   color: #586165;
-  font-size: 16px;
-  line-height: 24px;
+  color: rgba(88, 97, 101, .8);
+  font-size: 15px;
+  line-height: 20px;
 `;
 
 export default function PreviewSection() {
@@ -86,7 +88,7 @@ export default function PreviewSection() {
                   boxSizing: "border-box",
                   position: "relative",
                   margin: "0px 0px 16px 0px",
-                  maxHeight: "96px",
+                  maxHeight: "80px",
                   overflow: "hidden",
                 }}
               >
