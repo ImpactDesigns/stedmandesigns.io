@@ -2,34 +2,32 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const StyledButton = styled("button")(
-  {
-    padding: "6px 16px",
-    width: props => !props.isFullWidth ? 'auto' : '100%',
-    boxSizing: 'border-box',
-    fontFamily: 'Poppins',
-    fontSize: "18px",
-    lineHeight: "20px",
-    fontWeight: "600",
-    color: '#586165',
-    background: 'none',
-    border: '2px solid #586165',
-    borderRadius: '50px',
-    cursor: 'pointer',
-    '&:hover': {
-      color: '#FFFFFF',
-      background: '#586165',
-    },
-    '&:active': {
-      background: '#141719',
-      border: '2px solid #141719'
-    },
-    '&:disabled': {
-      color: '#586165',
-      background: '#D9D9D9'
-    }
-  }
-);
+const StyledButton = styled("button")({
+  padding: "6px 16px",
+  width: (props) => (!props.isFullWidth ? "auto" : "100%"),
+  boxSizing: "border-box",
+  fontFamily: "Poppins",
+  fontSize: "18px",
+  lineHeight: "20px",
+  fontWeight: "600",
+  color: "#586165",
+  background: "none",
+  border: "2px solid #586165",
+  borderRadius: "50px",
+  cursor: "pointer",
+  "&:hover": {
+    color: "#FFFFFF",
+    background: "#586165",
+  },
+  "&:active": {
+    background: "#141719",
+    border: "2px solid #141719",
+  },
+  "&:disabled": {
+    color: "#586165",
+    background: "#D9D9D9",
+  },
+});
 
 const Button = ({
   id,
@@ -38,7 +36,7 @@ const Button = ({
   buttonStyle = "primary",
   disabled = false,
   isFullWidth = false,
-  type = 'button',
+  type = "button",
   onclick,
   ...otherProps
 }) => {
