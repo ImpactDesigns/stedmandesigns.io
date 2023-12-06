@@ -155,7 +155,7 @@ export default function PreviewSection() {
             </div>
             <StyledButton
               buttonStyle="secondary"
-              onclick={() => alert("Button clicked.")}
+              onclick={() => navigate('/dev-projects')}
               label="View projects"
               isFullWidth={true}
             />
