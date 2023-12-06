@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Section } from "../../..";
+import { Section } from '../../../../components'
 
 const StyledSection = styled(Section)`
   padding-top: 56px;
