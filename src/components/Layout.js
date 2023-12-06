@@ -1,17 +1,55 @@
-import React from 'react'
-import AppContext from '../contexts/AppContext'
-import { Header } from '../components'
+import React from "react";
+import styled from "styled-components";
+import AppContext from "../contexts/AppContext";
+import { Header, Banner } from "../components";
+import closeIcon from "../images/icons/close-icon-v2.svg";
+
+const BannerText = styled("p")`
+  margin: 0px;
+  color: #fbfcfb;
+
+  & > span {
+    font-weight: 500;
+  }
+`;
+
+const CloseImage = styled.img`
+  position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &:hover {
+    border: 1px solid #fbfcfb;
+  }
+`;
 
 export default function Layout({ children }) {
+  const [isBannerVisible, setIsBannerVisible] = React.useState(true);
+
   return (
     <div>
       <AppContext>
         <title>Stedman Designs</title>
-          <Header />
-          <main>
-              { children }
-          </main>
+        <Header />
+        {isBannerVisible && (
+          <Banner>
+            <BannerText>
+              <span>Heads up!</span> Throughout the month of December, I will be
+              updating my portfolio and adding new projects as I get them
+              hosted.
+            </BannerText>
+            <CloseImage
+              src={closeIcon}
+              alt={"Click to close banner."}
+              onClick={() => setIsBannerVisible((prevState) => !prevState)}
+            />
+          </Banner>
+        )}
+        <main>{children}</main>
       </AppContext>
     </div>
-  )
+  );
 }
