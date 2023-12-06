@@ -72,15 +72,30 @@ const CardDescription = styled("p")`
   display: block;
   font-weight: 400;
   color: #586165;
-  color: rgba(88, 97, 101, .8);
+  color: rgba(88, 97, 101, 0.8);
   font-size: 15px;
   line-height: 20px;
+`;
+
+const StyledButton = styled(Button)`
+  border-color: dodgerblue;
+  color: dodgerblue;
+
+  &:hover {
+    background: dodgerblue;
+  }
+
+  &:disabled {
+    border-color: #586165;
+    background: #D9D9D9;
+    cursor: not-allowed;
+  },
 `;
 
 export default function PreviewSection() {
   return (
     <StyledSection>
-      <H5>My projects</H5>
+      <H5>Dev projects</H5>
       {projectsList.map((project, idx) => (
         <Wrapper key={idx}>
           <Card>
@@ -103,13 +118,50 @@ export default function PreviewSection() {
               <Button
                 buttonStyle="secondary"
                 onclick={() => navigate(project.projectPath)}
-                label="View project"
+                label="See more"
                 isFullWidth={true}
               ></Button>
             </div>
           </Card>
         </Wrapper>
       ))}
+      <Wrapper>
+        <Card style={{ height: "100%" }}>
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <CardImage image={null} />
+              <CardTitle>Other dev projects</CardTitle>
+              <div
+                style={{
+                  boxSizing: "border-box",
+                  position: "relative",
+                  margin: "0px 0px 0px 0px",
+                  height: "80px",
+                  maxHeight: "80px",
+                  overflow: "hidden",
+                }}
+              >
+                <CardDescription>
+                  Click the button to see my other projects.
+                </CardDescription>
+              </div>
+            </div>
+            <StyledButton
+              buttonStyle="secondary"
+              onclick={() => alert("Button clicked.")}
+              label="View projects"
+              isFullWidth={true}
+            />
+          </div>
+        </Card>
+      </Wrapper>
     </StyledSection>
   );
 }
