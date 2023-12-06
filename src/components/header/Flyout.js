@@ -92,8 +92,8 @@ export default function Flyout() {
             <LinksList>
                 <li><Link to={'/'} activeClassName={'mobile-active-link'}>Stedman Designs</Link></li>
                 {/* <li><Link to={'/my-work'} activeClassName={'mobile-active-link'}>Work</Link></li> */}
-                <li><Link to={'/about-me'} activeClassName={'mobile-active-link'}>About</Link></li>
-                <li><Link to={'/contact-me'} activeClassName={'mobile-active-link'}>Contact</Link></li>
+                {/* <li><Link to={'/about-me'} activeClassName={'mobile-active-link'}>About</Link></li> */}
+                {/* <li><Link to={'/contact-me'} activeClassName={'mobile-active-link'}>Contact</Link></li> */}
             </LinksList>
         </FlyoutContainer>
     )
