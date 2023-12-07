@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AppContext from "../contexts/AppContext";
+import useAppStore from "../stores/store";
 import { Header, Banner } from "../components";
 import closeIcon from "../images/icons/close-icon-v2.svg";
 
@@ -27,29 +27,27 @@ const CloseImage = styled.img`
 `;
 
 export default function Layout({ children }) {
-  const [isBannerVisible, setIsBannerVisible] = React.useState(true);
+  const isBannerVisible = useAppStore((state) => state.isBannerVisible);
+  const setIsBannerVisible = useAppStore((state) => state.setIsBannerVisible);
 
   return (
     <div>
-      <AppContext>
-        <title>Stedman Designs</title>
-        <Header />
-        {isBannerVisible && (
-          <Banner>
-            <BannerText>
-              <span>Heads up!</span> Throughout the month of December, I will be
-              updating my portfolio and adding new projects as I get them
-              hosted.
-            </BannerText>
-            <CloseImage
-              src={closeIcon}
-              alt={"Click to close banner."}
-              onClick={() => setIsBannerVisible((prevState) => !prevState)}
-            />
-          </Banner>
-        )}
-        <main>{children}</main>
-      </AppContext>
+      <title>Stedman Designs</title>
+      <Header />
+      {isBannerVisible && (
+        <Banner>
+          <BannerText>
+            <span>Heads up!</span> Throughout the month of December, I will be
+            updating my portfolio and adding new projects as I get them hosted.
+          </BannerText>
+          <CloseImage
+            src={closeIcon}
+            alt={"Click to close banner."}
+            onClick={() => setIsBannerVisible((prevState) => !prevState)}
+          />
+        </Banner>
+      )}
+      <main>{children}</main>
     </div>
   );
 }
