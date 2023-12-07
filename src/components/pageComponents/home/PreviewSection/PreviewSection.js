@@ -45,7 +45,7 @@ const Wrapper = styled("div")`
   }
 `;
 
-const H5 = styled("h4")`
+const H4 = styled("h4")`
   margin: 0px;
   position: relative;
   box-sizing: border-box;
@@ -94,7 +94,7 @@ const StyledButton = styled(Button)`
 export default function PreviewSection() {
   return (
     <StyledSection>
-      <H5>Dev projects</H5>
+      <H4>Dev projects</H4>
       {projectsList.map((project, idx) => (
         <Wrapper key={idx}>
           <Card>

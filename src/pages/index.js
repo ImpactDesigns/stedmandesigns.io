@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import {
   HeroSection,
-  PreviewSection,
+  // PreviewSection,
   FeaturedProjectsSection,
 } from "../components/pageComponents/home";
 import "../assets/index.css";
@@ -12,7 +12,7 @@ const IndexPage = () => {
     <Layout>
       <HeroSection />
       <FeaturedProjectsSection />
-      <PreviewSection />
+      {/* <PreviewSection /> */}
     </Layout>
   );
 };
