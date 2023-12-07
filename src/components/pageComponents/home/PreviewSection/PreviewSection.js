@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
-import { Section } from "../../..";
-import { Card, Button } from "../../..";
+import { Section, Card, Button } from '../../../../components'
 import CardImage from "./CardImage";
 import ProjectLinks from "./ProjectLinks";
 import projectsList from "../../../../assets/projectsList";
