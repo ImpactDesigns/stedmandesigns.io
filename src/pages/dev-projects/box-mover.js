@@ -4,11 +4,8 @@ import { HeroSection } from "../../components/pageComponents/projectPages/box-mo
 
 export default function BoxMoverPage() {
   return (
-    <div>
-      <Layout>
-        <p>Box mover page</p>
-        <HeroSection />
-      </Layout>
-    </div>
+    <Layout>
+      <HeroSection />
+    </Layout>
   );
 }
