@@ -16,7 +16,7 @@ export const Default = {
 }
 
 const meta = {
-  title: 'Components/Shared/Section',
+  title: 'Shared/Section',
   component: Section,
   tags: ['autodocs']
 }
