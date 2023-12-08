@@ -67,6 +67,8 @@ const IconContainer = styled.img`
   height: 24px;
   cursor: pointer;
   border-radius: 2px;
+  transform: ${(props) =>
+    !props.dropdownIsOpen ? "rotate(270deg)" : "rotate(180deg)"};
 
   &:hover {
     border: 1px solid #fbfcfb;
@@ -121,8 +123,7 @@ export default function Dropdown({ options, isFullWidth, ...otherProps }) {
         </InputText>
         <IconContainer
           src={chevronIcon}
-          // alt={"Click to close banner."}
-          // onClick={() => }
+          dropdownIsOpen={isFlyoutOpen}
         />
       </div>
       {isFlyoutOpen && (
