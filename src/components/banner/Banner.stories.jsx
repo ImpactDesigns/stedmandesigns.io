@@ -24,7 +24,7 @@ export const Children = {
 };
 
 const meta = {
-  title: "Components/Shared/Banner",
+  title: "Shared/Banner",
   component: Banner,
   tags: ["autodocs"],
   decorators: [

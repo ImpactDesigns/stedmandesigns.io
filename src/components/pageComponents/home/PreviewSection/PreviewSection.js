@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
-import { Section } from "../../..";
-import { Card, Button } from "../../..";
+import { Section, Card, Button } from '../../../../components'
 import CardImage from "./CardImage";
 import ProjectLinks from "./ProjectLinks";
 import projectsList from "../../../../assets/projectsList";
@@ -46,7 +45,7 @@ const Wrapper = styled("div")`
   }
 `;
 
-const H5 = styled("h4")`
+const H4 = styled("h4")`
   margin: 0px;
   position: relative;
   box-sizing: border-box;
@@ -65,8 +64,6 @@ const CardTitle = styled("h4")`
 
 const CardDescription = styled("p")`
   margin: 0px 0px 0px 0px;
-  position: relative;
-  box-sizing: border-box;
   position: relative;
   box-sizing: border-box;
   display: block;
@@ -95,7 +92,7 @@ const StyledButton = styled(Button)`
 export default function PreviewSection() {
   return (
     <StyledSection>
-      <H5>Dev projects</H5>
+      <H4>Dev projects</H4>
       {projectsList.map((project, idx) => (
         <Wrapper key={idx}>
           <Card>

@@ -25,7 +25,7 @@ const wrapperStyles = {
 }
 
 const meta = {
-  title: 'Components/Shared/Card',
+  title: 'Shared/Card',
   component: Card,
   tags: ["autodocs"],
   decorators: [
