@@ -124,7 +124,7 @@ export default function FeaturedProjects() {
     <StyledSection>
       <div style={{ marginBottom: "32px", display: "flex", gap: "16px" }}>
         <div style={{ width: "200px" }}>
-          <Dropdown options={tempOptions} isFullWidth />
+          <Dropdown options={tempOptions} isFullWidth tabIndex={0} />
         </div>
       </div>
       <CardContainer>

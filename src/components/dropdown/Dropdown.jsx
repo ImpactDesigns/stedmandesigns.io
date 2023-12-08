@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import useAppStore from "../../stores/store";
-import chevronIcon from "../../images/icons/chevron-icon.svg";
+import chevronIcon from "../../images/icons/chevron-icon-dark.svg";
 
 const DropdownContainer = styled("div")`
   box-sizing: border-box;
@@ -10,7 +10,9 @@ const DropdownContainer = styled("div")`
   padding: 10px 16px;
   width: ${(props) => (!props.isFullWidth ? "auto" : "100%")};
   display: ${(props) => (!props.isFullWidth ? "inline-block" : "block")};
-  background: #586165;
+  // background: #586165;
+  border: 2px solid #586165;
+  border: 2px solid rgba(88, 97, 101, 0.3);
   border-radius: 8px;
 `;
 
@@ -23,6 +25,7 @@ const InputText = styled("p")`
   font-size: 18px;
   line-height: 24px;
   color: #fbfcfb;
+  color: #586165;
 `;
 
 const DropdownFlyout = styled("div")`
@@ -68,7 +71,7 @@ const IconContainer = styled.img`
   cursor: pointer;
   border-radius: 2px;
   transform: ${(props) =>
-    !props.dropdownIsOpen ? "rotate(90deg)" : "rotate(180deg)"};
+    props.dropdownIsOpen ? "rotate(270deg)" : "rotate(180deg)"};
 
   &:hover {
     border: 1px solid #fbfcfb;
@@ -121,10 +124,7 @@ export default function Dropdown({ options, isFullWidth, ...otherProps }) {
         <InputText>
           {featuredProjectType === "dev" ? "Development" : "Design"}
         </InputText>
-        <IconContainer
-          src={chevronIcon}
-          dropdownIsOpen={isFlyoutOpen}
-        />
+        <IconContainer src={chevronIcon} dropdownIsOpen={isFlyoutOpen} />
       </div>
       {isFlyoutOpen && (
         <DropdownFlyout isFlyoutOpen={isFlyoutOpen}>
