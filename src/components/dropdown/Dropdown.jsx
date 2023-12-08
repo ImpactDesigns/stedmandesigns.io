@@ -8,9 +8,6 @@ const DropdownContainer = styled("div")`
   box-sizing: border-box;
   position: relative;
   padding: 10px 16px;
-  width: ${(props) => (!props.isFullWidth ? "auto" : "100%")};
-  display: ${(props) => (!props.isFullWidth ? "inline-block" : "block")};
-  // background: #586165;
   border: 2px solid #586165;
   border: 2px solid rgba(88, 97, 101, 0.3);
   border-radius: 8px;
@@ -32,12 +29,15 @@ const DropdownFlyout = styled("div")`
   box-sizing: border-box;
   position: absolute;
   top: 48px;
-  left: 0px;
-  right: 0px;
+  left: -2px;
+  right: -2px;
   border: 2px solid rgba(88, 97, 101, 0.3);
   border-radius: 8px;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0px 7px 8px 0px rgba(88, 97, 101, 0.2),
+    0px 5px 22px 0px rgba(88, 97, 101, 0.12),
+    0px 12px 17px 0px rgba(88, 97, 101, 0.14);
 `;
 
 const DropdownOptionContainer = styled("div")`
@@ -109,7 +109,6 @@ export default function Dropdown({ options, isFullWidth, ...otherProps }) {
 
   return (
     <DropdownContainer
-      isFullWidth={isFullWidth}
       onClick={() => setIsFlyoutOpen((prevState) => !prevState)}
       ref={dropdownRef}
       {...otherProps}
@@ -146,5 +145,4 @@ Dropdown.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
   }).isRequired,
-  isFullWidth: PropTypes.bool,
 };

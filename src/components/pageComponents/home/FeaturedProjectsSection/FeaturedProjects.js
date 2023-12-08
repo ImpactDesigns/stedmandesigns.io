@@ -36,6 +36,17 @@ const CardContainer = styled("div")`
   }
 `;
 
+const DropdownContainer = styled("div")`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+
+  @media (min-width: 1024px) {
+    gap: 32px;
+  }
+`;
+
 const Wrapper = styled("div")`
   position: relative;
   box-sizing: border-box;
@@ -57,16 +68,6 @@ const Wrapper = styled("div")`
     grid-column: span 3;
   }
 `;
-
-// const H4 = styled("h4")`
-//   margin: 0px;
-//   position: relative;
-//   box-sizing: border-box;
-//   grid-column: span 12;
-//   font-size: 24px;
-//   line-height: 28px;
-//   color: #586165;
-// `;
 
 const CardTitle = styled("h4")`
   position: relative;
@@ -119,9 +120,11 @@ export default function FeaturedProjects() {
 
   return (
     <StyledSection>
-      <div style={{ width: "200px", marginBottom: "20px" }}>
-        <Dropdown options={dropDownOptions} isFullWidth tabIndex={0} />
-      </div>
+      <DropdownContainer>
+        <Wrapper style={{ marginBottom: "20px" }}>
+          <Dropdown options={dropDownOptions} tabIndex={0} />
+        </Wrapper>
+      </DropdownContainer>
       <CardContainer>
         {filtered.splice(0, 3).map((project, idx) => (
           <Wrapper key={idx}>
@@ -146,7 +149,6 @@ export default function FeaturedProjects() {
                   buttonStyle="secondary"
                   onclick={() => navigate(project.projectPath)}
                   label="See more"
-                  isFullWidth={true}
                 />
               </div>
             </Card>
