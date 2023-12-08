@@ -68,7 +68,7 @@ const IconContainer = styled.img`
   cursor: pointer;
   border-radius: 2px;
   transform: ${(props) =>
-    !props.dropdownIsOpen ? "rotate(270deg)" : "rotate(180deg)"};
+    !props.dropdownIsOpen ? "rotate(90deg)" : "rotate(180deg)"};
 
   &:hover {
     border: 1px solid #fbfcfb;
