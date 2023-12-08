@@ -66,8 +66,6 @@ const CardDescription = styled("p")`
   margin: 0px 0px 0px 0px;
   position: relative;
   box-sizing: border-box;
-  position: relative;
-  box-sizing: border-box;
   display: block;
   font-weight: 400;
   color: #586165;

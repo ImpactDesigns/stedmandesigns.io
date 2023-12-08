@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
 import useAppStore from "../../../../stores/store";
-import { Section, Card, Button } from "../../../../components";
+import { Section, Card, Button, Dropdown } from "../../../../components";
 import CardImage from "../PreviewSection/CardImage";
 import ProjectLinks from "../PreviewSection/ProjectLinks";
 
 const StyledSection = styled(Section)`
   position: relative;
   box-sizing: border-box;
-  // border: 1px solid hotpink;
 
   // & > div:last-child {
   //   margin-bottom: 0px;
@@ -21,13 +20,23 @@ const StyledSection = styled(Section)`
   }
 
   @media (min-width: 1024px) {
-    // gap: 32px;
     padding-left: 200px;
     padding-right: 200px;
   }
 `;
 
 const CardContainer = styled("div")`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+
+  @media (min-width: 1024px) {
+    gap: 32px;
+  }
+`;
+
+const DropdownContainer = styled("div")`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -58,16 +67,6 @@ const Wrapper = styled("div")`
   @media (min-width: 1600px) {
     grid-column: span 3;
   }
-`;
-
-const H4 = styled("h4")`
-  margin: 0px;
-  position: relative;
-  box-sizing: border-box;
-  grid-column: span 12;
-  font-size: 24px;
-  line-height: 28px;
-  color: #586165;
 `;
 
 const CardTitle = styled("h4")`
@@ -106,12 +105,14 @@ const StyledButton = styled(Button)`
   },
 `;
 
+const dropDownOptions = [
+  { label: "Development", value: "dev" },
+  { label: "Design", value: "design" },
+];
+
 export default function FeaturedProjects() {
   const listOfProjects = useAppStore((state) => state.listOfProjects);
   const featuredProjectType = useAppStore((state) => state.featuredProjectType);
-  const setFeaturedProjectType = useAppStore(
-    (state) => state.setFeaturedProjectType
-  );
 
   const filtered = listOfProjects.filter(
     (obj) => obj.projectType === featuredProjectType
@@ -119,13 +120,11 @@ export default function FeaturedProjects() {
 
   return (
     <StyledSection>
-      <div style={{ marginBottom: "32px", display: "flex", gap: "16px" }}>
-        <H4>Featured</H4>
-        <select onChange={(e) => setFeaturedProjectType(e.target.value)}>
-          <option value="dev">Development</option>
-          <option value="design">Design</option>
-        </select>
-      </div>
+      <DropdownContainer>
+        <Wrapper style={{ marginBottom: "20px" }}>
+          <Dropdown options={dropDownOptions} tabIndex={0} />
+        </Wrapper>
+      </DropdownContainer>
       <CardContainer>
         {filtered.splice(0, 3).map((project, idx) => (
           <Wrapper key={idx}>
@@ -150,7 +149,6 @@ export default function FeaturedProjects() {
                   buttonStyle="secondary"
                   onclick={() => navigate(project.projectPath)}
                   label="See more"
-                  isFullWidth={true}
                 />
               </div>
             </Card>
@@ -190,7 +188,13 @@ export default function FeaturedProjects() {
               </div>
               <StyledButton
                 buttonStyle="secondary"
-                onclick={() => navigate("/dev-projects")}
+                onclick={() =>
+                  navigate(
+                    featuredProjectType === "dev"
+                      ? "/dev-projects"
+                      : "/design-projects"
+                  )
+                }
                 label="View projects"
                 isFullWidth={true}
               />
@@ -201,3 +205,5 @@ export default function FeaturedProjects() {
     </StyledSection>
   );
 }
+
+// featuredProjectType === "dev"
