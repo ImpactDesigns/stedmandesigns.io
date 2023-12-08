@@ -104,7 +104,7 @@ const StyledButton = styled(Button)`
   },
 `;
 
-const tempOptions = [
+const dropDownOptions = [
   { label: "Development", value: "dev" },
   { label: "Design", value: "design" },
 ];
@@ -112,9 +112,6 @@ const tempOptions = [
 export default function FeaturedProjects() {
   const listOfProjects = useAppStore((state) => state.listOfProjects);
   const featuredProjectType = useAppStore((state) => state.featuredProjectType);
-  const setFeaturedProjectType = useAppStore(
-    (state) => state.setFeaturedProjectType
-  );
 
   const filtered = listOfProjects.filter(
     (obj) => obj.projectType === featuredProjectType
@@ -122,10 +119,8 @@ export default function FeaturedProjects() {
 
   return (
     <StyledSection>
-      <div style={{ marginBottom: "32px", display: "flex", gap: "16px" }}>
-        <div style={{ width: "200px" }}>
-          <Dropdown options={tempOptions} isFullWidth tabIndex={0} />
-        </div>
+      <div style={{ width: "200px", marginBottom: "20px" }}>
+        <Dropdown options={dropDownOptions} isFullWidth tabIndex={0} />
       </div>
       <CardContainer>
         {filtered.splice(0, 3).map((project, idx) => (
@@ -198,7 +193,6 @@ export default function FeaturedProjects() {
                       : "/design-projects"
                   )
                 }
-                // onclick={() => navigate("/dev-projects")}
                 label="View projects"
                 isFullWidth={true}
               />
