@@ -37,7 +37,7 @@ export default function Layout({ children }) {
       {isBannerVisible && (
         <Banner>
           <BannerText>
-            <span>Heads up!</span> Throughout the month of December, I will be
+            <span>Heads up!</span> Throughout the month of February, I will be
             updating my portfolio and adding new projects as I get them hosted.
           </BannerText>
           <CloseImage
