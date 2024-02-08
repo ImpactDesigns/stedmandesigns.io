@@ -17,6 +17,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.9",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.9.0",
     "gatsby-plugin-image": "^2.9.0",
