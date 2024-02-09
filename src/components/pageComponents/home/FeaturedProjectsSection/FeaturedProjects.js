@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { navigate } from "gatsby";
-import useAppStore from "../../../../stores/store";
-import { Section, Card, Button, Dropdown } from "../../../../components";
-import CardImage from "../PreviewSection/CardImage";
-import ProjectLinks from "../PreviewSection/ProjectLinks";
+import React from "react"
+import styled from "styled-components"
+import { navigate } from "gatsby"
+import useAppStore from "../../../../stores/store"
+import { Section, Card, Button, Dropdown } from "../../../../components"
+import CardImage from "../PreviewSection/CardImage"
+import ProjectLinks from "../PreviewSection/ProjectLinks"
 
 const StyledSection = styled(Section)`
   position: relative;
@@ -23,7 +23,7 @@ const StyledSection = styled(Section)`
     padding-left: 200px;
     padding-right: 200px;
   }
-`;
+`
 
 const CardContainer = styled("div")`
   display: grid;
@@ -34,7 +34,7 @@ const CardContainer = styled("div")`
   @media (min-width: 1024px) {
     gap: 32px;
   }
-`;
+`
 
 const DropdownContainer = styled("div")`
   display: grid;
@@ -45,7 +45,7 @@ const DropdownContainer = styled("div")`
   @media (min-width: 1024px) {
     gap: 32px;
   }
-`;
+`
 
 const Wrapper = styled("div")`
   position: relative;
@@ -67,14 +67,14 @@ const Wrapper = styled("div")`
   @media (min-width: 1600px) {
     grid-column: span 3;
   }
-`;
+`
 
 const CardTitle = styled("h4")`
   position: relative;
   box-sizing: border-box;
   color: #586165;
   margin: 0px 0px 8px 0px;
-`;
+`
 
 const CardDescription = styled("p")`
   margin: 0px 0px 0px 0px;
@@ -88,35 +88,20 @@ const CardDescription = styled("p")`
   color: rgba(88, 97, 101, 0.8);
   font-size: 15px;
   line-height: 20px;
-`;
-
-const StyledButton = styled(Button)`
-  border-color: dodgerblue;
-  color: dodgerblue;
-
-  &:hover {
-    background: dodgerblue;
-  }
-
-  &:disabled {
-    border-color: #586165;
-    background: #D9D9D9;
-    cursor: not-allowed;
-  },
-`;
+`
 
 const dropDownOptions = [
   { label: "Development", value: "dev" },
   { label: "Design", value: "design" },
-];
+]
 
 export default function FeaturedProjects() {
-  const listOfProjects = useAppStore((state) => state.listOfProjects);
-  const featuredProjectType = useAppStore((state) => state.featuredProjectType);
+  const listOfProjects = useAppStore((state) => state.listOfProjects)
+  const featuredProjectType = useAppStore((state) => state.featuredProjectType)
 
   const filtered = listOfProjects.filter(
     (obj) => obj.projectType === featuredProjectType
-  );
+  )
 
   return (
     <StyledSection>
@@ -146,8 +131,7 @@ export default function FeaturedProjects() {
                 </div>
                 <ProjectLinks links={project.projectLinks} />
                 <Button
-                  buttonStyle="secondary"
-                  onclick={() => navigate(project.projectPath)}
+                  onClick={() => navigate(project.projectPath)}
                   label="See more"
                 />
               </div>
@@ -186,9 +170,8 @@ export default function FeaturedProjects() {
                   </CardDescription>
                 </div>
               </div>
-              <StyledButton
-                buttonStyle="secondary"
-                onclick={() =>
+              <Button
+                onClick={() =>
                   navigate(
                     featuredProjectType === "dev"
                       ? "/dev-projects"
@@ -196,14 +179,13 @@ export default function FeaturedProjects() {
                   )
                 }
                 label="View projects"
-                isFullWidth={true}
               />
             </div>
           </Card>
         </Wrapper>
       </CardContainer>
     </StyledSection>
-  );
+  )
 }
 
 // featuredProjectType === "dev"
