@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { navigate } from "gatsby";
-import { Section, Card, Button } from '../../../../components'
-import CardImage from "./CardImage";
-import ProjectLinks from "./ProjectLinks";
-import projectsList from "../../../../assets/projectsList";
+import React from "react"
+import styled from "styled-components"
+import { navigate } from "gatsby"
+import { Section, Card, Button } from "../../../../components"
+import CardImage from "./CardImage"
+import ProjectLinks from "./ProjectLinks"
+import projectsList from "../../../../assets/projectsList"
 
 const StyledSection = styled(Section)`
   position: relative;
@@ -21,7 +21,7 @@ const StyledSection = styled(Section)`
   @media (min-width: 1024px) {
     gap: 32px;
   }
-`;
+`
 
 const Wrapper = styled("div")`
   position: relative;
@@ -43,7 +43,7 @@ const Wrapper = styled("div")`
   @media (min-width: 1600px) {
     grid-column: span 3;
   }
-`;
+`
 
 const H4 = styled("h4")`
   margin: 0px;
@@ -53,14 +53,14 @@ const H4 = styled("h4")`
   font-size: 24px;
   line-height: 28px;
   color: #586165;
-`;
+`
 
 const CardTitle = styled("h4")`
   position: relative;
   box-sizing: border-box;
   color: #586165;
   margin: 0px 0px 8px 0px;
-`;
+`
 
 const CardDescription = styled("p")`
   margin: 0px 0px 0px 0px;
@@ -72,22 +72,7 @@ const CardDescription = styled("p")`
   color: rgba(88, 97, 101, 0.8);
   font-size: 15px;
   line-height: 20px;
-`;
-
-const StyledButton = styled(Button)`
-  border-color: dodgerblue;
-  color: dodgerblue;
-
-  &:hover {
-    background: dodgerblue;
-  }
-
-  &:disabled {
-    border-color: #586165;
-    background: #D9D9D9;
-    cursor: not-allowed;
-  },
-`;
+`
 
 export default function PreviewSection() {
   return (
@@ -113,10 +98,8 @@ export default function PreviewSection() {
               </div>
               <ProjectLinks links={project.projectLinks} />
               <Button
-                buttonStyle="secondary"
-                onclick={() => navigate(project.projectPath)}
+                onClick={() => navigate(project.projectPath)}
                 label="See more"
-                isFullWidth={true}
               ></Button>
             </div>
           </Card>
@@ -150,15 +133,13 @@ export default function PreviewSection() {
                 </CardDescription>
               </div>
             </div>
-            <StyledButton
-              buttonStyle="secondary"
-              onclick={() => navigate('/dev-projects')}
+            <Button
+              onClick={() => navigate("/dev-projects")}
               label="View projects"
-              isFullWidth={true}
             />
           </div>
         </Card>
       </Wrapper>
     </StyledSection>
-  );
+  )
 }
