@@ -1,20 +1,31 @@
-import React from "react";
-import Layout from "../components/Layout";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 import {
   HeroSection,
-  // PreviewSection,
   FeaturedProjectsSection,
-} from "../components/pageComponents/home";
-import "../assets/index.css";
+} from "../components/pageComponents/home"
+import "../assets/index.css"
 
-const IndexPage = () => {
+const IndexPage = ({ data, location }) => {
+  const siteTitle = data.site.sitMetadata?.title || "Title"
+
   return (
-    <Layout>
+    <Layout location={location} title={siteTitle}>
       <HeroSection />
       <FeaturedProjectsSection />
-      {/* <PreviewSection /> */}
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
+
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
