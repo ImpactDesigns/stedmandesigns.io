@@ -12,13 +12,14 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-material-ui",
     "gatsby-plugin-netlify",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,5 +35,19 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    }
   ],
 }
