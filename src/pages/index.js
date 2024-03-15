@@ -30,7 +30,6 @@ const IndexPage = ({ data, location }) => {
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
           const projectImage = post.frontmatter.featuredImage
-          console.log(projectImage)
 
           return (
             <Grid item xs={12} md={6} lg={4} key={post.fields.slug}>

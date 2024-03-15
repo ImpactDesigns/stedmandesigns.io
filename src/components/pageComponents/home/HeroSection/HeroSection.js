@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Section } from '../../../../components'
+import React from "react"
+import styled from "styled-components"
+import { Section } from "../../../../components"
 
 const StyledSection = styled(Section)`
   padding-top: 56px;
@@ -10,7 +10,7 @@ const StyledSection = styled(Section)`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-`;
+`
 
 const HeroTitle = styled.h1`
   margin: 0px 0px 0px 0px;
@@ -33,7 +33,7 @@ const HeroTitle = styled.h1`
   @media (min-width: 1024px) {
     grid-column: 1 / 13;
   }
-`;
+`
 
 const HeroSubtitle = styled.h2`
   margin: 16px 0px 0px 0px;
@@ -42,7 +42,7 @@ const HeroSubtitle = styled.h2`
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: rgba(88, 97, 101, .8);
+  color: rgba(88, 97, 101, 0.8);
 
   @media (min-width: 576px) {
     grid-column: 1 / 9;
@@ -51,7 +51,7 @@ const HeroSubtitle = styled.h2`
   @media (min-width: 1024px) {
     grid-column: 1 / 13;
   }
-`;
+`
 
 export default function HeroSection() {
   return (
@@ -59,5 +59,5 @@ export default function HeroSection() {
       <HeroTitle>My portfolio</HeroTitle>
       <HeroSubtitle>of fullstack development & UX Design projects</HeroSubtitle>
     </StyledSection>
-  );
+  )
 }
