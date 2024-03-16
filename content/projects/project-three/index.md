@@ -2,9 +2,10 @@
 id: 3
 title: Project Three
 date: "2023-05-03"
-description: "Hello World"
+description: "Hello World with some more content for copy."
 category: Dev
 featuredImage: './new-profile-pic.jpg'
+path: /project-three
 ---
 
 This is my first post on my new fake blog! How exciting!
