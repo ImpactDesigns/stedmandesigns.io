@@ -13,7 +13,7 @@ export default function ProjectPage({
     <Layout location={location} title={siteTitle}>
       <ProjectPageHeroSection title={project.frontmatter.title} />
       <article
-        className="blog-post"
+        className="project-post"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -23,7 +23,7 @@ export default function ProjectPage({
         />
         <hr />
       </article>
-      <nav className="blog-post-nav">
+      <nav className="project-post-nav">
         <ul
           style={{
             display: `flex`,
