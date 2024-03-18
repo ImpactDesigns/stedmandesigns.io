@@ -36,7 +36,12 @@ export default function ProjectSection() {
 
   return (
     <Box sx={{ paddingTop: "24px", paddingBottom: "32px" }}>
-      <Typography variant="h4" fontWeight="bold" color="#586165">
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        color="#586165"
+        fontFamily="poppins"
+      >
         Projects
       </Typography>
       <Grid

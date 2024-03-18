@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Section } from '../../../components'
+import React from "react"
+import styled from "styled-components"
+import { Section } from "../../components"
 
 const StyledSection = styled(Section)`
   padding: 40px 20px 0px 20px;
@@ -18,7 +18,7 @@ const StyledSection = styled(Section)`
     padding-left: 144px;
     padding-right: 144px;
   }
-`;
+`
 
 const Form = styled.form`
   margin: 0px;
@@ -36,7 +36,7 @@ const Form = styled.form`
   @media (min-width: 1200px) {
     grid-column: 4 / 10;
   }
-`;
+`
 
 const Label = styled.label`
   margin: 0px;
@@ -46,7 +46,7 @@ const Label = styled.label`
   font-size: 16px;
   line-height: 24px;
   color: #586165;
-`;
+`
 
 const Textarea = styled.textarea`
   box-sizing: border-box;
@@ -65,21 +65,21 @@ const Textarea = styled.textarea`
   border-radius: 0px;
   border: 1px solid rgba(40, 42, 43, 0.2);
   outline: none;
-`;
+`
 
 const StyledLabel = styled(Label)`
   margin-top: 32px;
   margin-bottom: 16px;
-`;
+`
 
 const StyledButton = styled.button`
   margin-top: 20px;
-`;
+`
 
 export default function MainSection() {
   function handleButtonClick(e) {
-    e.preventDefault();
-    alert("button has been fired");
+    e.preventDefault()
+    alert("button has been fired")
   }
 
   return (
@@ -99,5 +99,5 @@ export default function MainSection() {
         </StyledButton>
       </Form>
     </StyledSection>
-  );
+  )
 }

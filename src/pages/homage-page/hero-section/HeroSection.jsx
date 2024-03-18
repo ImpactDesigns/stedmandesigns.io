@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Section } from "../../../../components";
+import React from "react"
+import styled from "styled-components"
+import { Section } from "../../../components"
 
 const StyledSection = styled(Section)`
   padding-top: 56px;
@@ -10,7 +10,7 @@ const StyledSection = styled(Section)`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-`;
+`
 
 const HeroTitle = styled.h1`
   margin: 0px 0px 0px 0px;
@@ -33,7 +33,7 @@ const HeroTitle = styled.h1`
   @media (min-width: 1024px) {
     grid-column: 1 / 13;
   }
-`;
+`
 
 const HeroSubtitle = styled.h2`
   margin: 16px 0px 0px 0px;
@@ -51,13 +51,13 @@ const HeroSubtitle = styled.h2`
   @media (min-width: 1024px) {
     grid-column: 1 / 13;
   }
-`;
+`
 
 export default function HeroSection() {
   return (
     <StyledSection>
-      <HeroTitle>Box Mover</HeroTitle>
-      <HeroSubtitle>a frontend development project</HeroSubtitle>
+      <HeroTitle>My portfolio</HeroTitle>
+      <HeroSubtitle>of fullstack development & UX Design projects</HeroSubtitle>
     </StyledSection>
-  );
+  )
 }

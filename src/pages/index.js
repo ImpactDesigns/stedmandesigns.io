@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import HeroSection from "./homage-page/hero-section/HeroSection"
 import ProjectSection from "./homage-page/projects-section/ProjectSection"
-import { HeroSection } from "../components/pageComponents/home"
 import "../assets/index.css"
 
 const IndexPage = ({ data, location }) => {

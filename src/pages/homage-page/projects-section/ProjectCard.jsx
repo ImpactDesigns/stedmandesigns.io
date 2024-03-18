@@ -1,6 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
-import { Card, CardActionArea, Typography, Box } from "@mui/material"
+import { Box, Card, CardActionArea, Typography } from "@mui/material"
 
 export default function ProjectCard({ project }) {
   const { title, description } = project.frontmatter
@@ -17,15 +16,20 @@ export default function ProjectCard({ project }) {
     >
       <CardActionArea
         sx={{ padding: "24px" }}
-        onClick={() => navigate(project.fields.slug)}
+        onClick={() => alert("Card clicked")}
       >
         <Box pb="8px">
-          <Typography variant="h6" color="#586165" fontWeight="bold">
+          <Typography
+            variant="h6"
+            color="#586165"
+            fontWeight="bold"
+            fontFamily="poppins"
+          >
             {title}
           </Typography>
         </Box>
         <Box>
-          <Typography variant="body1" color="#586165">
+          <Typography variant="body1" color="#586165" fontFamily="poppins">
             {description}
           </Typography>
         </Box>

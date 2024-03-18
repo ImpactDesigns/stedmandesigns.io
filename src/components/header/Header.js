@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Typography } from "@mui/material"
 import styled from "styled-components"
 import useAppStore from "../../stores/store"
 // import Flyout from "./Flyout"
@@ -22,6 +23,7 @@ const NameText = styled.h5`
   justify-content: center;
   align-items: center;
   color: #586165;
+  font-family="poppins"
 `
 
 // const MenuIcon = styled.img`
@@ -39,7 +41,16 @@ export default function Header() {
   return (
     <StyledHeader>
       <Link to={"/"}>
-        <NameText>Stedman Designs</NameText>
+        <Typography
+          variant="h6"
+          fontWeight="bold"
+          component="p"
+          color="#586165"
+          fontFamily="poppins"
+        >
+          Stedman Designs
+        </Typography>
+        {/* <NameText>Stedman Designs</NameText> */}
       </Link>
       {/* <MenuIcon
         src={menuIcon}
