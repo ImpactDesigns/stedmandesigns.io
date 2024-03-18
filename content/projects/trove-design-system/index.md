@@ -1,12 +1,14 @@
 ---
-id: 3
-title: Project Three
-date: "2023-05-03"
-description: This was a project for a hackathon put on by Fall-In and Operation Code.
+id: 2
+title: Trove Design System
+date: "2022-05-02"
+description: Helped establish the design system for GoFundMe's organization, Classy.
 category: Dev
 featuredImage: './new-profile-pic.jpg'
-path: /project-three
+path: /trove-design-system
 ---
+
+# Title for Trove
 
 This is my first post on my new fake blog! How exciting!
 

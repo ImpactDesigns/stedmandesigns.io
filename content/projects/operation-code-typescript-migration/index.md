@@ -1,11 +1,11 @@
 ---
 id: 4
-title: VaxxOverflow
+title: Operation Code - Typescript migration
 date: "2023-05-04"
-description: This was a project for a hackathon put on by Fall-In and Operation Code.
+description: Migrated Operation Code's frontend repo to Next.js and Typescript.
 category: Dev
 featuredImage: ./new-profile-pic.jpg
-path: /vaxx-overflow
+path: /operation-code-typescript-migration
 ---
 
 # Overview

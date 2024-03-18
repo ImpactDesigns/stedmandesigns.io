@@ -1,12 +1,14 @@
 ---
 id: 1
-title: Project One
-date: "2023-05-01"
-description: This was a project for a hackathon put on by Fall-In and Operation Code.
+title: Rocket Auction & Tow Club
+date: "2021-07-01"
+description: End-to-end app for auctioning salvaged vehicles.
 category: Dev
 featuredImage: './new-profile-pic.jpg'
-path: /project-one
+path: /rocket-auction
 ---
+
+# Title for Rocket
 
 This is my first post on my new fake blog! How exciting!
 
