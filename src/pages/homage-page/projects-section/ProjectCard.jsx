@@ -2,7 +2,8 @@ import React from "react"
 import { Box, Card, CardActionArea, Typography } from "@mui/material"
 
 export default function ProjectCard({ project, onClick }) {
-  const { title, description } = project.frontmatter
+  const { title, description } = project && project.frontmatter ? project.frontmatter : {}
+  console.log(project.frontmatter)
 
   return (
     <Card
