@@ -54,13 +54,17 @@ export default function ProjectSection() {
           marginTop: "0px",
         }}
       >
-        {projectsNotFromProps.map((project) => {
-          return (
-            <Grid key={project.id} item xs={12} sm={12} md={6} lg={4}>
-              <ProjectCard project={project} onClick={() => setIsModalOpen()} />
-            </Grid>
-          )
-        })}
+        {projectsNotFromProps &&
+          projectsNotFromProps.map((project) => {
+            return (
+              <Grid key={project.id} item xs={12} sm={12} md={6} lg={4}>
+                <ProjectCard
+                  project={project}
+                  onClick={() => setIsModalOpen()}
+                />
+              </Grid>
+            )
+          })}
       </Grid>
     </Box>
   )

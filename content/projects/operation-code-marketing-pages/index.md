@@ -5,7 +5,7 @@ date: "2024-02-03"
 description: Designed and developed a corporate training landing page.
 category: Dev
 featuredImage: './new-profile-pic.jpg'
-path: /operation-code
+path: /operation-code-marketing-pages
 ---
 
 # Title for Operation code
