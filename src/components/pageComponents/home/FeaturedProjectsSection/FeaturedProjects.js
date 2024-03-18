@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { navigate } from "gatsby"
-import useAppStore from "../../../../stores/store"
+// import { navigate } from "gatsby"
+// import useAppStore from "../../../../stores/store"
 import { Section, Card, Button, Dropdown } from "../../../../components"
-import CardImage from "../PreviewSection/CardImage"
-import ProjectLinks from "../PreviewSection/ProjectLinks"
+// import CardImage from "../PreviewSection/CardImage"
+// import ProjectLinks from "../PreviewSection/ProjectLinks"
 
 const StyledSection = styled(Section)`
   position: relative;
@@ -25,92 +25,93 @@ const StyledSection = styled(Section)`
   }
 `
 
-const CardContainer = styled("div")`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  gap: 20px;
+// const CardContainer = styled("div")`
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-template-rows: auto;
+//   gap: 20px;
 
-  @media (min-width: 1024px) {
-    gap: 32px;
-  }
-`
+//   @media (min-width: 1024px) {
+//     gap: 32px;
+//   }
+// `
 
-const DropdownContainer = styled("div")`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  gap: 20px;
+// const DropdownContainer = styled("div")`
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-template-rows: auto;
+//   gap: 20px;
 
-  @media (min-width: 1024px) {
-    gap: 32px;
-  }
-`
+//   @media (min-width: 1024px) {
+//     gap: 32px;
+//   }
+// `
 
-const Wrapper = styled("div")`
-  position: relative;
-  box-sizing: border-box;
-  grid-column: span 12;
+// const Wrapper = styled("div")`
+//   position: relative;
+//   box-sizing: border-box;
+//   grid-column: span 12;
 
-  @media (min-width: 576px) {
-    grid-column: span 6;
-  }
+//   @media (min-width: 576px) {
+//     grid-column: span 6;
+//   }
 
-  @media (min-width: 1024px) {
-    grid-column: span 6;
-  }
+//   @media (min-width: 1024px) {
+//     grid-column: span 6;
+//   }
 
-  @media (min-width: 1200px) {
-    grid-column: span 4;
-  }
+//   @media (min-width: 1200px) {
+//     grid-column: span 4;
+//   }
 
-  @media (min-width: 1600px) {
-    grid-column: span 3;
-  }
-`
+//   @media (min-width: 1600px) {
+//     grid-column: span 3;
+//   }
+// `
 
-const CardTitle = styled("h4")`
-  position: relative;
-  box-sizing: border-box;
-  color: #586165;
-  margin: 0px 0px 8px 0px;
-`
+// const CardTitle = styled("h4")`
+//   position: relative;
+//   box-sizing: border-box;
+//   color: #586165;
+//   margin: 0px 0px 8px 0px;
+// `
 
-const CardDescription = styled("p")`
-  margin: 0px 0px 0px 0px;
-  position: relative;
-  box-sizing: border-box;
-  position: relative;
-  box-sizing: border-box;
-  display: block;
-  font-weight: 400;
-  color: #586165;
-  color: rgba(88, 97, 101, 0.8);
-  font-size: 15px;
-  line-height: 20px;
-`
+// const CardDescription = styled("p")`
+//   margin: 0px 0px 0px 0px;
+//   position: relative;
+//   box-sizing: border-box;
+//   position: relative;
+//   box-sizing: border-box;
+//   display: block;
+//   font-weight: 400;
+//   color: #586165;
+//   color: rgba(88, 97, 101, 0.8);
+//   font-size: 15px;
+//   line-height: 20px;
+// `
 
-const dropDownOptions = [
-  { label: "Development", value: "dev" },
-  { label: "Design", value: "design" },
-]
+// const dropDownOptions = [
+//   { label: "Development", value: "dev" },
+//   { label: "Design", value: "design" },
+// ]
 
 export default function FeaturedProjects() {
-  const listOfProjects = useAppStore((state) => state.listOfProjects)
-  const featuredProjectType = useAppStore((state) => state.featuredProjectType)
+  // const listOfProjects = useAppStore((state) => state.listOfProjects)
+  // const featuredProjectType = useAppStore((state) => state.featuredProjectType)
 
-  const filtered = listOfProjects.filter(
-    (obj) => obj.projectType === featuredProjectType
-  )
+  // const filtered = listOfProjects.filter(
+  //   (obj) => obj.projectType === featuredProjectType
+  // )
 
   return (
     <StyledSection>
-      <DropdownContainer>
+      <p>Hello</p>
+      {/* <DropdownContainer>
         <Wrapper style={{ marginBottom: "20px" }}>
           <Dropdown options={dropDownOptions} tabIndex={0} />
         </Wrapper>
-      </DropdownContainer>
-      <CardContainer>
+      </DropdownContainer> */}
+      {/* <CardContainer>
         {filtered.splice(0, 3).map((project, idx) => (
           <Wrapper key={idx}>
             <Card>
@@ -183,7 +184,7 @@ export default function FeaturedProjects() {
             </div>
           </Card>
         </Wrapper>
-      </CardContainer>
+      </CardContainer> */}
     </StyledSection>
   )
 }
