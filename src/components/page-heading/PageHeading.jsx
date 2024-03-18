@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
 
-export default function HeroSection() {
+export default function HeroSection({ title, subtitle }) {
   return (
     <Box sx={{ paddingTop: "32px", paddingBottom: "32px" }} component="section">
       <Typography
@@ -11,7 +11,7 @@ export default function HeroSection() {
         color="#586165"
         fontFamily="poppins"
       >
-        My portfolio
+        {title ? title : "Page title"}
       </Typography>
       <Typography
         variant="h5"
@@ -19,7 +19,7 @@ export default function HeroSection() {
         color="rgba(88, 97, 101, .7)"
         fontFamily="poppins"
       >
-        of fullstack development & UX Design projects
+        {subtitle ? subtitle : "page subtitle"}
       </Typography>
     </Box>
   )

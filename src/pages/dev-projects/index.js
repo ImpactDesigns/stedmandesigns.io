@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/Layout"
+import { PageHeading } from "../../components"
 
 const DevProjectsPage = ({ data, location }) => {
   const siteTitle = data.site.sitMetadata?.title || "Title"
@@ -9,6 +10,7 @@ const DevProjectsPage = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
+        <PageHeading title="Projects" subtitle="development" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -20,6 +22,7 @@ const DevProjectsPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <PageHeading title="Projects" subtitle="development" />
       <div>
         <ol style={{ listStyle: "none" }}>
           {posts.map((post) => {

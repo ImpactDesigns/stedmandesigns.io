@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import ProjectPageHeroSection from "./ProjectPageHeroSection"
+import { PageHeading } from "../components"
 
 export default function ProjectPage({
   data: { previous, next, site, markdownRemark: project },
@@ -11,7 +11,10 @@ export default function ProjectPage({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <ProjectPageHeroSection title={project.frontmatter.title} />
+      <PageHeading
+        title={project.frontmatter.title}
+        subtitle="a frontend development project"
+      />
       <article
         className="project-post"
         itemScope

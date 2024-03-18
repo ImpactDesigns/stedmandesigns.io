@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import HeroSection from "./homage-page/hero-section/HeroSection"
+import { PageHeading } from "../components"
 import ProjectSection from "./homage-page/projects-section/ProjectSection"
 import "../assets/index.css"
 
@@ -10,7 +10,7 @@ const IndexPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <HeroSection />
+      <PageHeading title="My portfolio" subtitle="of development & UX design projects" />
       <ProjectSection />
     </Layout>
   )
