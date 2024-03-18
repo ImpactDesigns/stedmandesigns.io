@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
+import { PageHeading } from "../components"
 
 export default function ProjectPage({
   data: { previous, next, site, markdownRemark: project },
@@ -10,25 +11,22 @@ export default function ProjectPage({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <PageHeading
+        title={project.frontmatter.title}
+        subtitle="a frontend development project"
+      />
       <article
-        className="blog-post"
+        className="project-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{project.frontmatter.title}</h1>
-          <p>{project.frontmatter.date}</p>
-        </header>
         <section
           dangerouslySetInnerHTML={{ __html: project.html }}
           itemProp="articleBody"
         />
         <hr />
-        {/* <footer>
-          <Bio />
-        </footer> */}
       </article>
-      <nav className="blog-post-nav">
+      <nav className="project-post-nav">
         <ul
           style={{
             display: `flex`,

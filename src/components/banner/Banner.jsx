@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import React from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const BannerContainer = styled("div")`
   padding: 20px 20px;
@@ -18,7 +18,7 @@ const BannerContainer = styled("div")`
     padding-left: 200px;
     padding-right: 200px;
   }
-`;
+`
 
 export default function Banner({ message, children, className }) {
   return (
@@ -29,11 +29,11 @@ export default function Banner({ message, children, className }) {
         children
       )}
     </BannerContainer>
-  );
+  )
 }
 
 Banner.propTypes = {
   message: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
-};
+}

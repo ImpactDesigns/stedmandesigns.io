@@ -60,13 +60,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
     background: #6CCC14;
-}
+} */
 
-button:active {
+/* button:active {
     background: #5AB209;
-}
+} */
 
 /* CUSTOM CLASSNAMES */
 

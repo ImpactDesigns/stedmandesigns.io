@@ -1,7 +1,4 @@
-import { create } from "zustand";
-import projectsList from "../assets/projectsList";
-
-// console.log(34343, projectsList)
+import { create } from "zustand"
 
 const useAppStore = create((set) => ({
   isFlyoutOpen: false,
@@ -10,10 +7,11 @@ const useAppStore = create((set) => ({
   isBannerVisible: true,
   setIsBannerVisible: () =>
     set((state) => ({ isBannerVisible: !state.isBannerVisible })),
+  isModalOpen: false,
+  setIsModalOpen: () => set((state) => ({ isModalOpen: !state.isModalOpen })),
   featuredProjectType: "dev",
   setFeaturedProjectType: (stuffToAdd) =>
     set({ featuredProjectType: stuffToAdd }),
-  listOfProjects: [...projectsList],
-}));
+}))
 
-export default useAppStore;
+export default useAppStore
