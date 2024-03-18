@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import useAppStore from "../../../stores/store"
 import ProjectCard from "./ProjectCard"
 import { Grid, Box, Typography } from "@mui/material"
 
 export default function ProjectSection() {
+  const setIsModalOpen = useAppStore((state) => state.setIsModalOpen)
   const queryData = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
@@ -55,7 +57,7 @@ export default function ProjectSection() {
         {projectsNotFromProps.map((project) => {
           return (
             <Grid key={project.id} item xs={12} sm={12} md={6} lg={4}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} onClick={() => setIsModalOpen()} />
             </Grid>
           )
         })}

@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from "zustand"
 
 const useAppStore = create((set) => ({
   isFlyoutOpen: false,
@@ -7,9 +7,11 @@ const useAppStore = create((set) => ({
   isBannerVisible: true,
   setIsBannerVisible: () =>
     set((state) => ({ isBannerVisible: !state.isBannerVisible })),
+  isModalOpen: false,
+  setIsModalOpen: () => set((state) => ({ isModalOpen: !state.isModalOpen })),
   featuredProjectType: "dev",
   setFeaturedProjectType: (stuffToAdd) =>
     set({ featuredProjectType: stuffToAdd }),
-}));
+}))
 
-export default useAppStore;
+export default useAppStore

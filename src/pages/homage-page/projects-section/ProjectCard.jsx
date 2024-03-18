@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Card, CardActionArea, Typography } from "@mui/material"
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onClick }) {
   const { title, description } = project.frontmatter
 
   return (
@@ -14,10 +14,7 @@ export default function ProjectCard({ project }) {
         boxShadow: "none",
       }}
     >
-      <CardActionArea
-        sx={{ padding: "24px" }}
-        onClick={() => alert("Card clicked")}
-      >
+      <CardActionArea sx={{ padding: "24px" }} onClick={onClick}>
         <Box pb="8px">
           <Typography
             variant="h6"
