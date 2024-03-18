@@ -2,7 +2,7 @@
 id: 4
 title: VaxxOverflow
 date: "2023-05-04"
-description: "This was a project for a hackathon put on by Fall-In and Operation Code."
+description: This was a project for a hackathon put on by Fall-In and Operation Code.
 category: Dev
 featuredImage: ./new-profile-pic.jpg
 path: /vaxx-overflow

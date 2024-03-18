@@ -15,9 +15,9 @@ const IndexPage = ({ data, location }) => {
     </Layout>
   )
 }
-
 export default IndexPage
 
+// TODO: Remove allMarkdownRemark part of query
 export const pageQuery = graphql`
   {
     site {

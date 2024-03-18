@@ -1,58 +1,35 @@
 import React from "react"
 import { navigate } from "gatsby"
-import moment from "moment"
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardActions,
-  CardMedia,
-  Typography,
-  Button,
-} from "@mui/material"
+import { Card, CardActionArea, Typography, Box } from "@mui/material"
 
 export default function ProjectCard({ project }) {
-  const { title, description, category, date } = project.frontmatter
-  const projectImage =
-    project.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images
-      .fallback.src
+  const { title, description } = project.frontmatter
 
   return (
     <Card
-      raised
       sx={{
         height: "100%",
         background: "none",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
+        border: "2px solid rgba(88, 97, 101, .4)",
+        borderRadius: "8px",
+        boxShadow: "none",
       }}
     >
-      <CardHeader
-        title={title}
-        subheader={moment(date).format("MMMM Do, YYYY")}
-      />
-      <div>
-        <CardMedia
-          component="img"
-          // height="192"
-          image={projectImage}
-          alt="Featured image"
-          sx={{ maxHeight: "140px" }}
-        />
-        <CardContent>
-          <Typography variant="body2">{description}</Typography>
-        </CardContent>
-      </div>
-      <CardActions>
-        <Button
-          variant="contained"
-          onClick={() => navigate(project.fields.slug)}
-          sx={{ fontWeight: 'bold' }}
-        >
-          View
-        </Button>
-      </CardActions>
+      <CardActionArea
+        sx={{ padding: "24px" }}
+        onClick={() => navigate(project.fields.slug)}
+      >
+        <Box pb="8px">
+          <Typography variant="h6" color="#586165" fontWeight="bold">
+            {title}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body1" color="#586165">
+            {description}
+          </Typography>
+        </Box>
+      </CardActionArea>
     </Card>
   )
 }

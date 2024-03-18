@@ -2,7 +2,7 @@
 id: 3
 title: Project Three
 date: "2023-05-03"
-description: "Hello World with some more content for copy."
+description: This was a project for a hackathon put on by Fall-In and Operation Code.
 category: Dev
 featuredImage: './new-profile-pic.jpg'
 path: /project-three
