@@ -1,8 +1,7 @@
 import React from "react"
-import styled from "styled-components"
 // import useAppStore from "../stores/store"
 import { Container, Box } from "@mui/material"
-import { Header, Banner } from "../components"
+import { Header } from "../components"
 // import closeIcon from "../images/icons/close-icon-v2.svg"
 
 // const BannerText = styled("p")`
@@ -14,18 +13,18 @@ import { Header, Banner } from "../components"
 //   }
 // `
 
-const CloseImage = styled.img`
-  position: relative;
-  box-sizing: border-box;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  border-radius: 2px;
+// const CloseImage = styled.img`
+//   position: relative;
+//   box-sizing: border-box;
+//   width: 24px;
+//   height: 24px;
+//   cursor: pointer;
+//   border-radius: 2px;
 
-  &:hover {
-    border: 1px solid #fbfcfb;
-  }
-`
+//   &:hover {
+//     border: 1px solid #fbfcfb;
+//   }
+// `
 
 export default function Layout({ children }) {
   // const isBannerVisible = useAppStore((state) => state.isBannerVisible)

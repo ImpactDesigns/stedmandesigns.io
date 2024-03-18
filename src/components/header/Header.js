@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Typography } from "@mui/material"
 import styled from "styled-components"
-import useAppStore from "../../stores/store"
+// import useAppStore from "../../stores/store"
 // import Flyout from "./Flyout"
 // import menuIcon from "../../images/icons/menu-icon.svg"
 
@@ -18,13 +18,13 @@ const StyledHeader = styled.header`
   }
 `
 
-const NameText = styled.h5`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #586165;
-  font-family="poppins"
-`
+// const NameText = styled.h5`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: #586165;
+//   font-family="poppins"
+// `
 
 // const MenuIcon = styled.img`
 //   width: 32px;
@@ -36,7 +36,7 @@ const NameText = styled.h5`
 // `
 
 export default function Header() {
-  const setIsFlyoutOpen = useAppStore((state) => state.setIsFlyoutOpen)
+  // const setIsFlyoutOpen = useAppStore((state) => state.setIsFlyoutOpen)
 
   return (
     <StyledHeader>

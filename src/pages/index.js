@@ -12,7 +12,7 @@ const modalContentStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "80%",
+  // width: "80%",
   bgcolor: "background.paper",
   borderRadius: "8px",
   boxShadow: 24,
@@ -31,7 +31,12 @@ const IndexPage = ({ data, location }) => {
         onClose={() => setIsModalOpen()}
         disableRestoreFocus
       >
-        <Box sx={modalContentStyle}>
+        <Box
+          sx={{
+            ...modalContentStyle,
+            width: { xs: "80%", md: "60%", lg: "50%", xl: "40%" },
+          }}
+        >
           <Typography variant="h5" component="p" color="#586165">
             Heads up!
           </Typography>
@@ -40,8 +45,8 @@ const IndexPage = ({ data, location }) => {
             component="p"
             sx={{ color: "rgba(88, 97, 101, .9)" }}
           >
-            Throughout the month of March I am updating this portfolio, and now
-            in the process of adding projects.
+            Throughout the month of March this portfolio is being updated, and I
+            am now in the process of assembling content. Check back soon!
           </Typography>
           <Box pt={"12px"}>
             <Button
