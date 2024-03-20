@@ -2,7 +2,7 @@ import React from "react"
 import { Box, Card, CardActionArea, Typography } from "@mui/material"
 
 export default function ProjectCard({ project, onClick }) {
-  const { title, description } =
+  const { title, description, projectFor } =
     project && project.frontmatter ? project.frontmatter : {}
 
   return (
@@ -15,8 +15,21 @@ export default function ProjectCard({ project, onClick }) {
         boxShadow: "none",
       }}
     >
-      <CardActionArea sx={{ padding: "24px" }} onClick={onClick}>
+      <CardActionArea
+        sx={{
+          padding: "24px",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "start",
+          alignItems: "stretch",
+        }}
+        onClick={onClick}
+      >
         <Box pb="8px">
+          <Typography variant="body2" color="#586165" fontFamily="poppins">
+            {projectFor}
+          </Typography>
           <Typography
             variant="h6"
             color="#586165"

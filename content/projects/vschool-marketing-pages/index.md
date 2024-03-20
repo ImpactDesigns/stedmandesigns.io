@@ -1,10 +1,11 @@
 ---
 id: 6
-title: VSchool - Marketing pages
+title: Marketing pages and CMS
 date: "2020-07-02"
 description: Created UI components rendering content from headless CMS.
+projectFor: VSchool
 category: Dev
-featuredImage: './new-profile-pic.jpg'
+featuredImage: "./new-profile-pic.jpg"
 path: /vschool-marketing-pages
 ---
 

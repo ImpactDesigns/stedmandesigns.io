@@ -1,10 +1,11 @@
 ---
 id: 3
-title: Operation Code - Marketing page
+title: Marketing pages
 date: "2024-02-03"
 description: Designed and developed a corporate training landing page.
+projectFor: Operation Code
 category: Dev
-featuredImage: './new-profile-pic.jpg'
+featuredImage: "./new-profile-pic.jpg"
 path: /operation-code-marketing-pages
 ---
 

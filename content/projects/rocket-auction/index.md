@@ -1,10 +1,11 @@
 ---
 id: 1
-title: Rocket Auction & Tow Club
+title: Rocket Auction app
 date: "2021-07-01"
 description: End-to-end app for auctioning salvaged vehicles.
+projectFor: Rocket Auction & Tow Club
 category: Dev
-featuredImage: './new-profile-pic.jpg'
+featuredImage: "./new-profile-pic.jpg"
 path: /rocket-auction
 ---
 
