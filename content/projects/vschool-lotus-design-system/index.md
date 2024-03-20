@@ -1,10 +1,11 @@
 ---
 id: 5
-title: VSchool - Lotus Design System
+title: Lotus Design System
 date: "2019-08-02"
 description: Developed the component library and implemented components across website and marketing pages.
+projectFor: VSchool
 category: Dev
-featuredImage: './new-profile-pic.jpg'
+featuredImage: "./new-profile-pic.jpg"
 path: /vschool-lotus-design-system
 ---
 

@@ -3,8 +3,9 @@ id: 2
 title: Trove Design System
 date: "2022-05-02"
 description: Helped establish the design system for GoFundMe's organization, Classy.
+projectFor: GoFundMe/Classy
 category: Dev
-featuredImage: './new-profile-pic.jpg'
+featuredImage: "./new-profile-pic.jpg"
 path: /trove-design-system
 ---
 

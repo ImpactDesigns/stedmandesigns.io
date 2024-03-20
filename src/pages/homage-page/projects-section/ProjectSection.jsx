@@ -19,6 +19,7 @@ export default function ProjectSection() {
             date
             description
             category
+            projectFor
             featuredImage {
               childImageSharp {
                 gatsbyImageData(layout: FULL_WIDTH)
