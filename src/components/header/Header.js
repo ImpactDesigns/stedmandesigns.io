@@ -7,11 +7,15 @@ import styled from "styled-components"
 // import menuIcon from "../../images/icons/menu-icon.svg"
 
 const StyledHeader = styled.header`
-  position: relative;
+  position: sticky;
+  top: 0;
   padding: 40px 0px 16px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fbfcfb;
+  z-index: 200;
+  // border: 1px solid red;
 
   & > a > h5:hover {
     color: #93de4e;
