@@ -2,6 +2,49 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import { PageHeading } from "../components"
+import { Box } from "@mui/material"
+import styled from "styled-components"
+
+const ArticleBodyContainer = styled.div`
+  & > h2 {
+    padding-bottom: 4px;
+    font-size: 52px;
+    line-height: 56px;
+    font-weight: bold;
+    color: #586165;
+  }
+
+  & > h3 {
+    padding-bottom: 4px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #586165;
+  }
+
+  & > h4 {
+    padding-bottom: 4px;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #586165;
+  }
+
+  & > h5 {
+    padding-bottom: 4px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #586165;
+  }
+
+  & > p {
+    padding-bottom: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #586165;
+  }
+`
 
 export default function ProjectPage({
   data: { previous, next, site, markdownRemark: project },
@@ -15,17 +58,21 @@ export default function ProjectPage({
         title={project.frontmatter.title}
         subtitle="a frontend development project"
       />
-      <article
+      <Box
+        pt="48px"
+        px={{ lg: 24, xl: 30 }}
+        component="article"
         className="project-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <section
+        <ArticleBodyContainer
           dangerouslySetInnerHTML={{ __html: project.html }}
           itemProp="articleBody"
         />
         <hr />
-      </article>
+      </Box>
+
       <nav className="project-post-nav">
         <ul
           style={{
