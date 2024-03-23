@@ -1,11 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery, navigate } from "gatsby"
-// import useAppStore from "../../../stores/store"
 import ProjectCard from "./ProjectCard"
 import { Grid, Box, Typography } from "@mui/material"
 
 export default function ProjectSection() {
-  // const setIsModalOpen = useAppStore((state) => state.setIsModalOpen)
   const queryData = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
