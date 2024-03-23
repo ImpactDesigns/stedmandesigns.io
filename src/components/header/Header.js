@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   background: #fbfcfb;
+  z-index: 200;
   // border: 1px solid red;
 
   & > a > h5:hover {
