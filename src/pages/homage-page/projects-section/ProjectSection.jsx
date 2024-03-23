@@ -1,11 +1,11 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import useAppStore from "../../../stores/store"
+import { graphql, useStaticQuery, navigate } from "gatsby"
+// import useAppStore from "../../../stores/store"
 import ProjectCard from "./ProjectCard"
 import { Grid, Box, Typography } from "@mui/material"
 
 export default function ProjectSection() {
-  const setIsModalOpen = useAppStore((state) => state.setIsModalOpen)
+  // const setIsModalOpen = useAppStore((state) => state.setIsModalOpen)
   const queryData = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
@@ -28,6 +28,17 @@ export default function ProjectSection() {
       }
     }
   `)
+
+  // featuredImage {
+  //   childImageSharp {
+  //     fluid(maxWidth: 750) {
+  //       ...GatsbyImageSharpFluid
+  //     }
+  //     fixed(width: 80, height: 46) {
+  //       ...GatsbyImageSharpFixed
+  //     }
+  //   }
+  // }
 
   const projectsFromQueryData = queryData.allMarkdownRemark.nodes
 
@@ -59,7 +70,7 @@ export default function ProjectSection() {
               <Grid key={project.id} item xs={12} sm={12} md={6} lg={4}>
                 <ProjectCard
                   project={project}
-                  onClick={() => setIsModalOpen()}
+                  onClick={() => navigate(project.fields.slug)}
                 />
               </Grid>
             )

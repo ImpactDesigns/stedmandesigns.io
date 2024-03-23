@@ -88,16 +88,6 @@ export const pageQuery = graphql`
           title
           description
           category
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 750) {
-                ...GatsbyImageSharpFluid
-              }
-              fixed(width: 80, height: 46) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
         }
       }
     }
