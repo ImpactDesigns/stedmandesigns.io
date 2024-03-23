@@ -1,19 +1,18 @@
 ---
-id: 5
 title: Lotus Design System
-date: "2019-08-02"
 description: Developed the component library and implemented components across website and marketing pages.
-projectFor: VSchool
 category: Dev
+date: "2019-08-02"
+projectFor: VSchool
 featuredImage: "./new-profile-pic.jpg"
-path: /vschool-lotus-design-system
 ---
 
 # Title for Lotus
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum!
 
 ## Here is a heading
 

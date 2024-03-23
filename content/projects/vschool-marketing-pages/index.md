@@ -1,19 +1,18 @@
 ---
-id: 6
 title: Marketing pages and CMS
-date: "2020-07-02"
 description: Created UI components rendering content from headless CMS.
-projectFor: VSchool
 category: Dev
+date: "2020-07-02"
+projectFor: VSchool
 featuredImage: "./new-profile-pic.jpg"
-path: /vschool-marketing-pages
 ---
 
 # Title for Vschool marketing pages
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum!
 
 ## Here is a heading
 

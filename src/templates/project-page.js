@@ -71,11 +71,14 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
         category
+        date(formatString: "MMMM DD, YYYY")
       }
     }
     previous: markdownRemark(id: { eq: $previousProjectId }) {

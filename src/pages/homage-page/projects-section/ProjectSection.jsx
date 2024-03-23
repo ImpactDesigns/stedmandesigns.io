@@ -16,9 +16,7 @@ export default function ProjectSection() {
           }
           frontmatter {
             title
-            date
             description
-            category
             projectFor
             featuredImage {
               childImageSharp {
@@ -31,9 +29,9 @@ export default function ProjectSection() {
     }
   `)
 
-  const projectsNotFromProps = queryData.allMarkdownRemark.nodes
+  const projectsFromQueryData = queryData.allMarkdownRemark.nodes
 
-  if (!projectsNotFromProps) {
+  if (!projectsFromQueryData) {
     return <p>There are no projects</p>
   }
 
@@ -55,8 +53,8 @@ export default function ProjectSection() {
           marginTop: "0px",
         }}
       >
-        {projectsNotFromProps &&
-          projectsNotFromProps.map((project) => {
+        {projectsFromQueryData &&
+          projectsFromQueryData.map((project) => {
             return (
               <Grid key={project.id} item xs={12} sm={12} md={6} lg={4}>
                 <ProjectCard

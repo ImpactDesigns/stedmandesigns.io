@@ -1,12 +1,10 @@
 ---
-id: 4
 title: Typescript migration
-date: "2023-05-04"
 description: Migrated Operation Code's frontend repo to Next.js and Typescript.
-projectFor: Operation Code
 category: Dev
-featuredImage: ./new-profile-pic.jpg
-path: /operation-code-typescript-migration
+date: "2023-05-04"
+projectFor: Operation Code
+featuredImage: "./new-profile-pic.jpg"
 ---
 
 # Overview

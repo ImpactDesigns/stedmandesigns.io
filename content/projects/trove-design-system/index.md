@@ -1,20 +1,44 @@
 ---
-id: 2
 title: Trove Design System
-date: "2022-05-02"
 description: Helped establish the design system for GoFundMe's organization, Classy.
-projectFor: GoFundMe/Classy
 category: Dev
+date: "2022-05-02"
+projectFor: GoFundMe/Classy
 featuredImage: "./new-profile-pic.jpg"
-path: /trove-design-system
 ---
 
-# Title for Trove
+# Heading 1
 
-This is my first post on my new fake blog! How exciting!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum!
 
-I'm sure I'll write a lot more interesting things in the future.
+## Heading 2
 
-## Here is a heading
+Some content under heading 2.
 
-And here is some more copy.
+### Heading 3
+
+Some content under heading 3.
+
+#### Heading 4
+
+Some content under heading 4.
+
+##### Heading 5
+
+Some content under heading 5.
+
+###### Heading 6
+
+Some content under heading 6.
+
+###### Heading 6
+
+Some content under heading 6.
+
+##### Heading 5
+
+Some content under heading 5.
+

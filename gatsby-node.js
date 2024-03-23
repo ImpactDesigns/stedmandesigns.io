@@ -99,6 +99,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      projectFor: String
+      category: String
+      featuredImage: File @fileByRelativePath
     }
 
     type Fields {

@@ -1,19 +1,18 @@
 ---
-id: 1
 title: Rocket Auction app
-date: "2021-07-01"
 description: End-to-end app for auctioning salvaged vehicles.
-projectFor: Rocket Auction & Tow Club
 category: Dev
+date: "2021-07-01"
+projectFor: Rocket Auction & Tow Club
 featuredImage: "./new-profile-pic.jpg"
-path: /rocket-auction
 ---
 
 # Title for Rocket
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+optio, eaque rerum!
 
 ## Here is a heading
 
