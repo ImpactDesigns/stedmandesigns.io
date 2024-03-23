@@ -75,7 +75,7 @@ const saltyDuckEgg = "chinese preserved food product"
 ```
 
 ```
-featuredImage: ../../../src/images/new-profile-pic.png
+const fakeCode = () => fakeCode()
 ```
 
-![My new profile picture](./new-profile-pic.jpg)
+![Image in this post](./oc-marketing-image.jpg)
