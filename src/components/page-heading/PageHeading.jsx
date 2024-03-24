@@ -1,9 +1,11 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
+import BackButton from "./BackButton"
 
 export default function HeroSection({ title, subtitle }) {
   return (
     <Box sx={{ paddingTop: "32px", paddingBottom: "32px" }} component="section">
+      <BackButton pageTitle={title} />
       <Typography
         variant="h1"
         fontWeight="bold"
