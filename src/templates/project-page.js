@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import useAppStore from "../stores/store"
 import Layout from "../components/Layout"
-import { PageHeading } from "../components"
+import { PageHeading, ProjectNavigation } from "../components"
 import { Box, Modal, Button, Typography } from "@mui/material"
 import styled from "styled-components"
 
@@ -66,6 +66,17 @@ export default function ProjectPage({
   const setIsModalOpen = useAppStore((state) => state.setIsModalOpen)
   const siteTitle = site.siteMetadata?.title || `A Title`
 
+  const projectNavigationOptions = {
+    next: {
+      slug: next && next.fields.slug,
+      label: next && next.frontmatter.title,
+    },
+    previous: {
+      slug: previous && previous.fields.slug,
+      label: previous && previous.frontmatter.title,
+    },
+  }
+
   React.useEffect(() => {
     setIsModalOpen()
   }, [setIsModalOpen])
@@ -123,8 +134,9 @@ export default function ProjectPage({
         />
         <hr />
       </Box>
+      <ProjectNavigation navigationOptions={projectNavigationOptions} />
 
-      <nav className="project-post-nav">
+      {/* <nav className="project-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -149,7 +161,7 @@ export default function ProjectPage({
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   )
 }
