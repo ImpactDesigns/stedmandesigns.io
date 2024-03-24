@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Button } from "../../components"
+import { Button } from "../components"
 import { Box, Typography } from "@mui/material"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward"
