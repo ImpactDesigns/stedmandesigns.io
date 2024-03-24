@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
+import useAppStore from "../../stores/store"
 import { Section } from "../../components"
 
 const StyledSection = styled(Section)`
@@ -78,13 +79,36 @@ const StyledButton = styled.button`
 `
 
 export default function MainSection() {
+  const contactFormEmailInput = useAppStore(
+    (state) => state.contactFormEmailInput
+  )
+  const setContactFormEmailInput = useAppStore(
+    (state) => state.setContactFormEmailInput
+  )
+  const contactFormNameInput = useAppStore(
+    (state) => state.contactFormNameInput
+  )
+  const setContactFormNameInput = useAppStore(
+    (state) => state.setContactFormNameInput
+  )
+  const contactFormMessageInput = useAppStore(
+    (state) => state.contactFormMessageInput
+  )
+  const setContactFormMessageInput = useAppStore(
+    (state) => state.setContactFormMessageInput
+  )
+
+  const handleChange = (e, setter) => {
+    setter(e.target.value)
+  }
+
   function sendMessage(e) {
     e.preventDefault()
 
     const templateParams = {
-      from_name: "Johnny ringo",
-      from_email: "michaelstedman81@gmail.com",
-      message: "Content from the message box.",
+      from_name: contactFormNameInput,
+      from_email: contactFormEmailInput,
+      message: contactFormMessageInput,
     }
 
     emailjs
@@ -102,6 +126,10 @@ export default function MainSection() {
           console.error(err)
         }
       )
+
+    setContactFormEmailInput("")
+    setContactFormNameInput("")
+    setContactFormMessageInput("")
   }
 
   return (
@@ -112,10 +140,18 @@ export default function MainSection() {
           id={"messageTextArea"}
           name={"messageTextArea"}
           placeholder={"Write your message here..."}
+          onChange={(e) => handleChange(e, setContactFormMessageInput)}
         />
         <StyledLabel>Regards,</StyledLabel>
-        <input placeholder="Your name" />
-        <input placeholder="Your email" className={"mt-12px"} />
+        <input
+          placeholder="Your name"
+          onChange={(e) => handleChange(e, setContactFormNameInput)}
+        />
+        <input
+          placeholder="Your email"
+          className={"mt-12px"}
+          onChange={(e) => handleChange(e, setContactFormEmailInput)}
+        />
         <StyledButton onClick={(e) => sendMessage(e)}>Send email</StyledButton>
       </Form>
     </StyledSection>

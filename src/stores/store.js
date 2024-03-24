@@ -12,6 +12,15 @@ const useAppStore = create((set) => ({
   featuredProjectType: "dev",
   setFeaturedProjectType: (stuffToAdd) =>
     set({ featuredProjectType: stuffToAdd }),
+  contactFormEmailInput: "",
+  setContactFormEmailInput: (stuffToAdd) =>
+    set({ contactFormEmailInput: stuffToAdd }),
+  contactFormNameInput: "",
+  setContactFormNameInput: (stuffToAdd) =>
+    set({ contactFormNameInput: stuffToAdd }),
+  contactFormMessageInput: "",
+  setContactFormMessageInput: (stuffToAdd) =>
+    set({ contactFormMessageInput: stuffToAdd }),
 }))
 
 export default useAppStore
