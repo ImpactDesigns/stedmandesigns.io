@@ -13,7 +13,7 @@ export default function ProjectNavigation({
       <ul
         style={{
           display: `flex`,
-          flexWrap: `wrap`,
+          gap: "12px",
           justifyContent: `space-between`,
           listStyle: `none`,
           padding: 0,
@@ -29,6 +29,9 @@ export default function ProjectNavigation({
                   fontWeight: "bold",
                   color: "#586165",
                   gap: "8px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "hidden",
                 }}
                 aria-label={"Go to previous project"}
                 role="button"
@@ -40,6 +43,12 @@ export default function ProjectNavigation({
                   fontWeight="medium"
                   color="#586165"
                   fontFamily="poppins"
+                  maxWidth={{ xs: "100px", sm: "180px" }}
+                  sx={{
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
                 >
                   {previous.label}
                 </Typography>
@@ -48,7 +57,12 @@ export default function ProjectNavigation({
           </Box>
         </li>
         <li>
-          <Box py="12px" sx={{ minHeight: "36px" }}>
+          <Box
+            py="12px"
+            sx={{
+              minHeight: "36px",
+            }}
+          >
             {next.slug && (
               <Button
                 variant="text"
@@ -57,6 +71,9 @@ export default function ProjectNavigation({
                   fontWeight: "bold",
                   color: "#586165",
                   gap: "8px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "hidden",
                 }}
                 aria-label={"Go to next project"}
                 role="button"
@@ -67,6 +84,12 @@ export default function ProjectNavigation({
                   fontWeight="medium"
                   color="#586165"
                   fontFamily="poppins"
+                  maxWidth={{ xs: "100px", sm: "180px", md: "100%" }}
+                  sx={{
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
                 >
                   {next.label}
                 </Typography>
