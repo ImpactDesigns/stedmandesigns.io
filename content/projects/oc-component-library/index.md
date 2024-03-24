@@ -1,6 +1,6 @@
 ---
-title: Typescript migration
-description: Migrated Operation Code's frontend repo to Next.js and Typescript.
+title: Component library & pages
+description: Migrated to Typescript, added features, and maintained components.
 category: Dev
 date: "2023-05-04"
 projectFor: Operation Code
