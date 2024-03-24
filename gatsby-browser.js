@@ -10,6 +10,10 @@ const onClientEntry = () => {
 
   script.onload = () => {
     emailjs.init(process.env.GATSBY_EMAILJS_USER_ID)
+    emailjs.init({
+      publicKey: process.env.GATSBY_EMAILJS_USER_ID,
+      blockHeadless: true
+    })
   }
 }
 
