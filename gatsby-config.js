@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Here is my site title`,
+    title: `stedmandesigns.io`,
     author: {
       name: `Stedman`,
       summary: `likes to Software Engineer.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A portfolio of my web design and development projects.`,
     siteUrl: `https://www.stedmandesigns.io/`,
-    social: {
-      twitter: `thaSteady`,
-    },
   },
   plugins: [
     "gatsby-plugin-material-ui",
@@ -43,11 +40,11 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 750,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
   ],
 }
