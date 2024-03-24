@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import emailjs from "emailjs-com"
 import { Section } from "../../components"
 
 const StyledSection = styled(Section)`
@@ -77,9 +78,30 @@ const StyledButton = styled.button`
 `
 
 export default function MainSection() {
-  function handleButtonClick(e) {
+  function sendMessage(e) {
     e.preventDefault()
-    alert("button has been fired")
+
+    const templateParams = {
+      from_name: "Johnny ringo",
+      from_email: "michaelstedman81@gmail.com",
+      message: "Content from the message box.",
+    }
+
+    emailjs
+      .send(
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.GATSBY_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text)
+        },
+        function (err) {
+          console.error(err)
+        }
+      )
   }
 
   return (
@@ -94,9 +116,7 @@ export default function MainSection() {
         <StyledLabel>Regards,</StyledLabel>
         <input placeholder="Your name" />
         <input placeholder="Your email" className={"mt-12px"} />
-        <StyledButton onClick={(e) => handleButtonClick(e)}>
-          Send email
-        </StyledButton>
+        <StyledButton onClick={(e) => sendMessage(e)}>Send email</StyledButton>
       </Form>
     </StyledSection>
   )
