@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Typography } from "@mui/material"
+import { navigate } from "gatsby"
+import { Button, Typography } from "@mui/material"
 import styled from "styled-components"
 // import useAppStore from "../../stores/store"
 // import Flyout from "./Flyout"
@@ -17,18 +17,10 @@ const StyledHeader = styled.header`
   z-index: 200;
   // border: 1px solid red;
 
-  & > a > h5:hover {
-    color: #93de4e;
-  }
+  // & > a > h5:hover {
+  //   color: #93de4e;
+  // }
 `
-
-// const NameText = styled.h5`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: #586165;
-//   font-family="poppins"
-// `
 
 // const MenuIcon = styled.img`
 //   width: 32px;
@@ -44,18 +36,21 @@ export default function Header() {
 
   return (
     <StyledHeader>
-      <Link to={"/"}>
+      <Button
+        sx={{ paddingLeft: "0px", paddingRight: "0px" }}
+        onClick={() => navigate("/")}
+      >
         <Typography
           variant="h6"
           fontWeight="bold"
           component="p"
           color="#586165"
           fontFamily="poppins"
+          textTransform="capitalize"
         >
           Stedman Designs
         </Typography>
-        {/* <NameText>Stedman Designs</NameText> */}
-      </Link>
+      </Button>
       {/* <MenuIcon
         src={menuIcon}
         alt={"Click to open menu"}
