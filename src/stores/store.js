@@ -12,6 +12,9 @@ const useAppStore = create((set) => ({
   featuredProjectType: "dev",
   setFeaturedProjectType: (stuffToAdd) =>
     set({ featuredProjectType: stuffToAdd }),
+  isContactFormLoading: false,
+  setIsContactFormLoading: () =>
+    set((state) => ({ isContactFormLoading: !state.isContactFormLoading })),
   contactFormEmailInput: "",
   setContactFormEmailInput: (stuffToAdd) =>
     set({ contactFormEmailInput: stuffToAdd }),
@@ -21,6 +24,9 @@ const useAppStore = create((set) => ({
   contactFormMessageInput: "",
   setContactFormMessageInput: (stuffToAdd) =>
     set({ contactFormMessageInput: stuffToAdd }),
+  isSnackbarOpen: false,
+  setIsSnackbarOpen: () =>
+    set((state) => ({ isSnackbarOpen: !state.isSnackbarOpen })),
 }))
 
 export default useAppStore
