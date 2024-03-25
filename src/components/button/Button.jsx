@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Button } from "@mui/material"
+import Button from '@mui/material/Button'
 
 export default function NewButton({
   children,

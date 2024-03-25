@@ -1,6 +1,8 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Box, Button, Typography } from "@mui/material"
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 export default function BackButton({ pageTitle }) {

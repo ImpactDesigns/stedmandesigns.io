@@ -1,5 +1,8 @@
 import React from "react"
-import { Box, Card, CardActionArea, Typography } from "@mui/material"
+import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
+import Card from "@mui/material/Card"
+import CardActionArea from "@mui/material/CardActionArea"
 
 export default function ProjectCard({ project, onClick }) {
   const { title, description, projectFor } =
