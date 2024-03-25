@@ -70,12 +70,4 @@ molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
 optio, eaque rerum!
 
-```js
-const saltyDuckEgg = "chinese preserved food product"
-```
-
-```
-featuredImage: ../../../src/images/new-profile-pic.png
-```
-
 ![My new profile picture](./new-profile-pic.jpg)

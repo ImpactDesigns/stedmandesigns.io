@@ -6,7 +6,7 @@ import MainSection from "./MainSection"
 export default function ContactMePage() {
   return (
     <Layout>
-      <PageHeading title="Contact me" subtitle="let's work together" />
+      <PageHeading title="Contact me" subtitle="and let's work together" />
       <MainSection />
     </Layout>
   )
