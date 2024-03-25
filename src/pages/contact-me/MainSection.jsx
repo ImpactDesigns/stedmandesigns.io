@@ -1,82 +1,11 @@
 import React from "react"
-import styled from "styled-components"
 import emailjs from "emailjs-com"
 import useAppStore from "../../stores/store"
-import { Section } from "../../components"
-
-const StyledSection = styled(Section)`
-  padding: 40px 20px 0px 20px;
-  min-height: calc(100vh - 80px);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-
-  @media (min-width: 768px) {
-    padding: 0px 80px 0px 80px;
-  }
-
-  @media (min-width: 1024px) {
-    padding-top: 80px;
-    padding-left: 144px;
-    padding-right: 144px;
-  }
-`
-
-const Form = styled.form`
-  margin: 0px;
-  padding: 20px 0px 20px 0px;
-  grid-column: 1 / 13;
-
-  @media (min-width: 768px) {
-    grid-column: 3 / 11;
-  }
-
-  @media (min-width: 1024px) {
-    grid-column: 3 / 11;
-  }
-
-  @media (min-width: 1200px) {
-    grid-column: 4 / 10;
-  }
-`
-
-const Label = styled.label`
-  margin: 0px;
-  display: block;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #586165;
-`
-
-const Textarea = styled.textarea`
-  box-sizing: border-box;
-  margin-top: 16px;
-  padding: 10px 12px 10px 12px;
-  width: 100%;
-  height: 240px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #586165;
-  resize: none;
-  background: #fbfcfb;
-  border-radius: 0px;
-  border: 1px solid rgba(40, 42, 43, 0.2);
-  outline: none;
-`
-
-const StyledLabel = styled(Label)`
-  margin-top: 32px;
-  margin-bottom: 16px;
-`
-
-const StyledButton = styled.button`
-  margin-top: 20px;
-`
+import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography"
+import TextField from "@mui/material/TextField"
+import { Button } from "../../components"
 
 export default function MainSection() {
   const contactFormEmailInput = useAppStore(
@@ -133,27 +62,69 @@ export default function MainSection() {
   }
 
   return (
-    <StyledSection>
-      <Form>
-        <Label htmlFor={"messageTextArea"}>Hey Stedman,</Label>
-        <Textarea
-          id={"messageTextArea"}
-          name={"messageTextArea"}
-          placeholder={"Write your message here..."}
-          onChange={(e) => handleChange(e, setContactFormMessageInput)}
-        />
-        <StyledLabel>Regards,</StyledLabel>
-        <input
-          placeholder="Your name"
-          onChange={(e) => handleChange(e, setContactFormNameInput)}
-        />
-        <input
-          placeholder="Your email"
-          className={"mt-12px"}
-          onChange={(e) => handleChange(e, setContactFormEmailInput)}
-        />
-        <StyledButton onClick={(e) => sendMessage(e)}>Send email</StyledButton>
-      </Form>
-    </StyledSection>
+    <Box pt="24px">
+      <form>
+        <Grid container>
+          <Grid item xs={12} pb={1}>
+            <Typography variant="h6" color="#586165" fontFamily="poppins">
+              Hey Stedman,
+            </Typography>
+          </Grid>
+          <Grid item xs={12} pb={4}>
+            <TextField
+              id="contactFormMessage"
+              name={"contactFormMessage"}
+              label="Write your message here..."
+              aria-label="Write your message here"
+              fullWidth
+              multiline
+              onChange={(e) => handleChange(e, setContactFormMessageInput)}
+            />
+          </Grid>
+          <Grid item pb={1} xs={12}>
+            <Typography variant="h6" color="#586165" fontFamily="poppins">
+              Regards,
+            </Typography>
+          </Grid>
+          <Grid item xs={12} pb={2}>
+            <TextField
+              id="contactFormName"
+              name={"contactFormName"}
+              label="Your name..."
+              aria-label="Name"
+              fullWidth
+              onChange={(e) => handleChange(e, setContactFormNameInput)}
+            />
+          </Grid>
+          <Grid item xs={12} pb={2}>
+            <TextField
+              id="contactFormEmail"
+              name={"contactFormEmail"}
+              label="Your email..."
+              aria-label="Email"
+              fullWidth
+              onChange={(e) => handleChange(e, setContactFormEmailInput)}
+              inputProps={{ background: "pink", border: "2px solid red" }}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Button
+              variant="outlined"
+              onClick={(e) => sendMessage(e)}
+              size="large"
+              sx={{
+                color: "#586165",
+                borderColor: "rgba(88, 97, 101, 0.4)",
+                "&:hover": {
+                  color: "#1565c0",
+                },
+              }}
+            >
+              Send email
+            </Button>
+          </Grid>
+        </Grid>
+      </form>
+    </Box>
   )
 }
