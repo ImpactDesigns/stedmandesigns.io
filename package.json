@@ -1,6 +1,6 @@
 {
   "name": "stedmandesigns.io",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "private": true,
   "description": "stedmandesigns.io",
   "author": "Michael Stedman",
@@ -28,6 +28,7 @@
     "emailjs-com": "^3.2.0",
     "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-material-ui": "^4.0.2",
     "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-netlify": "^5.1.1",

@@ -4,9 +4,6 @@ const useAppStore = create((set) => ({
   isFlyoutOpen: false,
   setIsFlyoutOpen: () =>
     set((state) => ({ isFlyoutOpen: !state.isFlyoutOpen })),
-  isBannerVisible: true,
-  setIsBannerVisible: () =>
-    set((state) => ({ isBannerVisible: !state.isBannerVisible })),
   isModalOpen: false,
   setIsModalOpen: () => set((state) => ({ isModalOpen: !state.isModalOpen })),
   featuredProjectType: "dev",

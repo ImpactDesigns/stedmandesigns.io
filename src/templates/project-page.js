@@ -1,11 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 import useAppStore from "../stores/store"
+import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Modal from "@mui/material/Modal"
 import Layout from "../components/Layout"
 import { PageHeading } from "../components"
 import ProjectNavigation from "./ProjectNavigation"
-import { Box, Modal, Button, Typography } from "@mui/material"
-import styled from "styled-components"
 
 const ArticleBodyContainer = styled.div`
   & > h2 {

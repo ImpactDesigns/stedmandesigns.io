@@ -50,5 +50,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "My portfolio of web projects.",
+        short_name: "Stedman's portfolio",
+        start_url: "/",
+        description: "A portfolio of my UX design and development projects.",
+        lang: "en",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "standalone",
+        icon: "src/images/site-favicon.svg", // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
+      },
+    },
   ],
 }
