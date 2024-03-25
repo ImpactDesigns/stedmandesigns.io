@@ -1,8 +1,10 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import useAppStore from "../../stores/store";
-import closeIcon from "../../images/icons/close-icon.svg";
+import React from "react"
+import { navigate } from "gatsby"
+import styled from "styled-components"
+import useAppStore from "../../stores/store"
+import Typography from "@mui/material/Typography"
+import { Button } from "../../components"
+import closeIcon from "../../images/icons/close-icon.svg"
 
 const FlyoutContainer = styled.div`
   position: absolute;
@@ -17,7 +19,7 @@ const FlyoutContainer = styled.div`
   visibility: ${(props) => props.visibility};
   background: #fbfcfb;
   z-index: 5;
-`;
+`
 
 const LinksList = styled.ul`
   width: 100%;
@@ -41,10 +43,10 @@ const LinksList = styled.ul`
     text-align: center;
   }
 
-  & > li > a:hover {
-    color: #93de4e;
-  }
-`;
+  // & > li > a:hover {
+  //   color: #93de4e;
+  // }
+`
 
 const CloseImage = styled.img`
   position: absolute;
@@ -52,23 +54,28 @@ const CloseImage = styled.img`
   right: 24px;
   width: 32px;
   cursor: pointer;
-`;
+`
 
 export default function Flyout() {
-  const isFlyoutOpen = useAppStore((state) => state.isFlyoutOpen);
-  const setIsFlyoutOpen = useAppStore((state) => state.setIsFlyoutOpen);
-  const { visibility } = setFlyoutVisibiity(isFlyoutOpen);
+  const isFlyoutOpen = useAppStore((state) => state.isFlyoutOpen)
+  const setIsFlyoutOpen = useAppStore((state) => state.setIsFlyoutOpen)
+  const { visibility } = setFlyoutVisibiity(isFlyoutOpen)
 
   function setFlyoutVisibiity(status) {
     if (status) {
       return {
         visibility: "visible",
-      };
+      }
     } else if (!status) {
       return {
         visibility: "hidden",
-      };
+      }
     }
+  }
+
+  const handleLinkClick = (path) => {
+    navigate(path)
+    setIsFlyoutOpen()
   }
 
   return (
@@ -80,14 +87,44 @@ export default function Flyout() {
       />
       <LinksList>
         <li>
-          <Link to={"/"} activeClassName={"mobile-active-link"}>
-            Stedman Designs
-          </Link>
+          <Button
+            variant="text"
+            component="a"
+            onClick={() => handleLinkClick("/")}
+            sx={{
+              textTransform: "capitalize",
+            }}
+          >
+            <Typography
+              variant="h5"
+              component="p"
+              fontFamily="poppins"
+              color="#586165"
+            >
+              Stedman Designs
+            </Typography>
+          </Button>
         </li>
-        {/* <li><Link to={'/my-work'} activeClassName={'mobile-active-link'}>Work</Link></li> */}
-        {/* <li><Link to={'/about-me'} activeClassName={'mobile-active-link'}>About</Link></li> */}
-        {/* <li><Link to={'/contact-me'} activeClassName={'mobile-active-link'}>Contact</Link></li> */}
+        <li>
+          <Button
+            variant="text"
+            component="a"
+            onClick={() => handleLinkClick("/contact-me")}
+          >
+            <Typography
+              variant="h5"
+              component="p"
+              fontFamily="poppins"
+              color="#586165"
+              sx={{
+                textTransform: "capitalize",
+              }}
+            >
+              Contact me
+            </Typography>
+          </Button>
+        </li>
       </LinksList>
     </FlyoutContainer>
-  );
+  )
 }
