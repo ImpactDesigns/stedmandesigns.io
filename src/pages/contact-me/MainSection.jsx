@@ -62,10 +62,10 @@ export default function MainSection() {
   }
 
   return (
-    <Box pt="24px">
+    <Box pt="24px" px={{ sm: 6, md: 25, lg: 44 }}>
       <form>
         <Grid container>
-          <Grid item xs={12} pb={1}>
+          <Grid item xs={12} pb={2}>
             <Typography variant="h6" color="#586165" fontFamily="poppins">
               Hey Stedman,
             </Typography>
@@ -74,14 +74,16 @@ export default function MainSection() {
             <TextField
               id="contactFormMessage"
               name={"contactFormMessage"}
-              label="Write your message here..."
+              label="Write your message here"
               aria-label="Write your message here"
               fullWidth
               multiline
+              inputProps={{ style: { fontFamily: "poppins" } }}
+              InputLabelProps={{ style: { fontFamily: "poppins" } }}
               onChange={(e) => handleChange(e, setContactFormMessageInput)}
             />
           </Grid>
-          <Grid item pb={1} xs={12}>
+          <Grid item pb={2} xs={12}>
             <Typography variant="h6" color="#586165" fontFamily="poppins">
               Regards,
             </Typography>
@@ -93,19 +95,24 @@ export default function MainSection() {
               label="Your name..."
               aria-label="Name"
               fullWidth
+              inputProps={{ style: { fontFamily: "poppins" } }}
+              InputLabelProps={{ style: { fontFamily: "poppins" } }}
               onChange={(e) => handleChange(e, setContactFormNameInput)}
             />
           </Grid>
-          <Grid item xs={12} pb={2}>
-            <TextField
-              id="contactFormEmail"
-              name={"contactFormEmail"}
-              label="Your email..."
-              aria-label="Email"
-              fullWidth
-              onChange={(e) => handleChange(e, setContactFormEmailInput)}
-              inputProps={{ background: "pink", border: "2px solid red" }}
-            />
+          <Grid item xs={12} pb={0}>
+            <Box height="5.5rem">
+              <TextField
+                id="contactFormEmail"
+                name={"contactFormEmail"}
+                label="Your email..."
+                aria-label="Email"
+                fullWidth
+                inputProps={{ style: { fontFamily: "poppins" } }}
+                InputLabelProps={{ style: { fontFamily: "poppins" } }}
+                onChange={(e) => handleChange(e, setContactFormEmailInput)}
+              />
+            </Box>
           </Grid>
           <Grid item xs={12}>
             <Button
@@ -113,6 +120,7 @@ export default function MainSection() {
               onClick={(e) => sendMessage(e)}
               size="large"
               sx={{
+                fontFamily: "poppins",
                 color: "#586165",
                 borderColor: "rgba(88, 97, 101, 0.4)",
                 "&:hover": {
