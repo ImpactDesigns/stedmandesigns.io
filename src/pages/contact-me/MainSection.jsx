@@ -5,6 +5,9 @@ import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
+import Snackbar from "@mui/material/Snackbar"
+import IconButton from "@mui/material/IconButton"
+import CloseIcon from "@mui/icons-material/Close"
 import { Button } from "../../components"
 
 export default function MainSection() {
@@ -26,13 +29,44 @@ export default function MainSection() {
   const setContactFormMessageInput = useAppStore(
     (state) => state.setContactFormMessageInput
   )
+  const isSnackbarOpen = useAppStore((state) => state.isSnackbarOpen)
+  const setIsSnackbarOpen = useAppStore((state) => state.setIsSnackbarOpen)
+  const isContactFormLoading = useAppStore(
+    (state) => state.isContactFormLoading
+  )
+  const setIsContactFormLoading = useAppStore(
+    (state) => state.setIsContactFormLoading
+  )
 
   const handleChange = (e, setter) => {
     setter(e.target.value)
   }
 
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return
+    }
+
+    setIsSnackbarOpen()
+  }
+
+  const action = (
+    <>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleSnackbarClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </>
+  )
+
   function sendMessage(e) {
     e.preventDefault()
+
+    setIsContactFormLoading()
 
     const templateParams = {
       from_name: contactFormNameInput,
@@ -49,20 +83,41 @@ export default function MainSection() {
       )
       .then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text)
+          setContactFormEmailInput("")
+          setContactFormNameInput("")
+          setContactFormMessageInput("")
+          console.log(
+            `Email sent to: ${process.env.GATSBY_EMAILJS_USER_ID}.`,
+            response.status,
+            response.text
+          )
+          setIsContactFormLoading()
+          setIsSnackbarOpen()
         },
         function (err) {
           console.error(err)
         }
       )
-
-    setContactFormEmailInput("")
-    setContactFormNameInput("")
-    setContactFormMessageInput("")
   }
 
   return (
-    <Box pt="24px" px={{ sm: 6, md: 25, lg: 44 }}>
+    <Box pt="24px" pb="32px" px={{ sm: 6, md: 25, lg: 44 }}>
+      <Snackbar
+        open={isSnackbarOpen}
+        autoHideDuration={3500}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        onClose={handleSnackbarClose}
+        message="Email sent! Thanks for reaching out."
+        action={action}
+        ContentProps={{
+          style: {
+            background: "#fbfcfb",
+            fontFamily: "poppins",
+            color: "#586165",
+            border: "2px solid rgba(88, 97, 101, 0.4)",
+          },
+        }}
+      />
       <form>
         <Grid container>
           <Grid item xs={12} pb={2}>
@@ -76,6 +131,7 @@ export default function MainSection() {
               name={"contactFormMessage"}
               label="Write your message here"
               aria-label="Write your message here"
+              value={contactFormMessageInput}
               fullWidth
               multiline
               inputProps={{ style: { fontFamily: "poppins" } }}
@@ -94,6 +150,7 @@ export default function MainSection() {
               name={"contactFormName"}
               label="Your name..."
               aria-label="Name"
+              value={contactFormNameInput}
               fullWidth
               inputProps={{ style: { fontFamily: "poppins" } }}
               InputLabelProps={{ style: { fontFamily: "poppins" } }}
@@ -107,6 +164,7 @@ export default function MainSection() {
                 name={"contactFormEmail"}
                 label="Your email..."
                 aria-label="Email"
+                value={contactFormEmailInput}
                 fullWidth
                 inputProps={{ style: { fontFamily: "poppins" } }}
                 InputLabelProps={{ style: { fontFamily: "poppins" } }}
@@ -128,7 +186,7 @@ export default function MainSection() {
                 },
               }}
             >
-              Send email
+              {!isContactFormLoading ? "Send email" : "Sending..."}
             </Button>
           </Grid>
         </Grid>
