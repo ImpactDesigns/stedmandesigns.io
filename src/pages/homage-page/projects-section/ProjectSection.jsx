@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery, navigate } from "gatsby"
 import ProjectCard from "./ProjectCard"
-import { Grid, Box, Typography } from "@mui/material"
+import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
 
 export default function ProjectSection() {
   const queryData = useStaticQuery(graphql`

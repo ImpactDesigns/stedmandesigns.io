@@ -1,6 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { Button, Typography } from "@mui/material"
+import Button from '@mui/material/Button'
+import Typography from "@mui/material/Typography"
 import styled from "styled-components"
 // import useAppStore from "../../stores/store"
 // import Flyout from "./Flyout"
