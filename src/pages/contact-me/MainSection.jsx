@@ -1,103 +1,138 @@
 import React from "react"
-import styled from "styled-components"
-import { Section } from "../../components"
-
-const StyledSection = styled(Section)`
-  padding: 40px 20px 0px 20px;
-  min-height: calc(100vh - 80px);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-
-  @media (min-width: 768px) {
-    padding: 0px 80px 0px 80px;
-  }
-
-  @media (min-width: 1024px) {
-    padding-top: 80px;
-    padding-left: 144px;
-    padding-right: 144px;
-  }
-`
-
-const Form = styled.form`
-  margin: 0px;
-  padding: 20px 0px 20px 0px;
-  grid-column: 1 / 13;
-
-  @media (min-width: 768px) {
-    grid-column: 3 / 11;
-  }
-
-  @media (min-width: 1024px) {
-    grid-column: 3 / 11;
-  }
-
-  @media (min-width: 1200px) {
-    grid-column: 4 / 10;
-  }
-`
-
-const Label = styled.label`
-  margin: 0px;
-  display: block;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #586165;
-`
-
-const Textarea = styled.textarea`
-  box-sizing: border-box;
-  margin-top: 16px;
-  padding: 10px 12px 10px 12px;
-  width: 100%;
-  height: 240px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #586165;
-  resize: none;
-  background: #fbfcfb;
-  border-radius: 0px;
-  border: 1px solid rgba(40, 42, 43, 0.2);
-  outline: none;
-`
-
-const StyledLabel = styled(Label)`
-  margin-top: 32px;
-  margin-bottom: 16px;
-`
-
-const StyledButton = styled.button`
-  margin-top: 20px;
-`
+import emailjs from "emailjs-com"
+import useAppStore from "../../stores/store"
+import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography"
+import TextField from "@mui/material/TextField"
+import { Button } from "../../components"
 
 export default function MainSection() {
-  function handleButtonClick(e) {
+  const contactFormEmailInput = useAppStore(
+    (state) => state.contactFormEmailInput
+  )
+  const setContactFormEmailInput = useAppStore(
+    (state) => state.setContactFormEmailInput
+  )
+  const contactFormNameInput = useAppStore(
+    (state) => state.contactFormNameInput
+  )
+  const setContactFormNameInput = useAppStore(
+    (state) => state.setContactFormNameInput
+  )
+  const contactFormMessageInput = useAppStore(
+    (state) => state.contactFormMessageInput
+  )
+  const setContactFormMessageInput = useAppStore(
+    (state) => state.setContactFormMessageInput
+  )
+
+  const handleChange = (e, setter) => {
+    setter(e.target.value)
+  }
+
+  function sendMessage(e) {
     e.preventDefault()
-    alert("button has been fired")
+
+    const templateParams = {
+      from_name: contactFormNameInput,
+      from_email: contactFormEmailInput,
+      message: contactFormMessageInput,
+    }
+
+    emailjs
+      .send(
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.GATSBY_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text)
+        },
+        function (err) {
+          console.error(err)
+        }
+      )
+
+    setContactFormEmailInput("")
+    setContactFormNameInput("")
+    setContactFormMessageInput("")
   }
 
   return (
-    <StyledSection>
-      <Form>
-        <Label htmlFor={"messageTextArea"}>Hey Stedman,</Label>
-        <Textarea
-          id={"messageTextArea"}
-          name={"messageTextArea"}
-          placeholder={"Write your message here..."}
-        />
-        <StyledLabel>Regards,</StyledLabel>
-        <input placeholder="Your name" />
-        <input placeholder="Your email" className={"mt-12px"} />
-        <StyledButton onClick={(e) => handleButtonClick(e)}>
-          Send email
-        </StyledButton>
-      </Form>
-    </StyledSection>
+    <Box pt="24px" px={{ sm: 6, md: 25, lg: 44 }}>
+      <form>
+        <Grid container>
+          <Grid item xs={12} pb={2}>
+            <Typography variant="h6" color="#586165" fontFamily="poppins">
+              Hey Stedman,
+            </Typography>
+          </Grid>
+          <Grid item xs={12} pb={4}>
+            <TextField
+              id="contactFormMessage"
+              name={"contactFormMessage"}
+              label="Write your message here"
+              aria-label="Write your message here"
+              fullWidth
+              multiline
+              inputProps={{ style: { fontFamily: "poppins" } }}
+              InputLabelProps={{ style: { fontFamily: "poppins" } }}
+              onChange={(e) => handleChange(e, setContactFormMessageInput)}
+            />
+          </Grid>
+          <Grid item pb={2} xs={12}>
+            <Typography variant="h6" color="#586165" fontFamily="poppins">
+              Regards,
+            </Typography>
+          </Grid>
+          <Grid item xs={12} pb={2}>
+            <TextField
+              id="contactFormName"
+              name={"contactFormName"}
+              label="Your name..."
+              aria-label="Name"
+              fullWidth
+              inputProps={{ style: { fontFamily: "poppins" } }}
+              InputLabelProps={{ style: { fontFamily: "poppins" } }}
+              onChange={(e) => handleChange(e, setContactFormNameInput)}
+            />
+          </Grid>
+          <Grid item xs={12} pb={0}>
+            <Box height="5.5rem">
+              <TextField
+                id="contactFormEmail"
+                name={"contactFormEmail"}
+                label="Your email..."
+                aria-label="Email"
+                fullWidth
+                inputProps={{ style: { fontFamily: "poppins" } }}
+                InputLabelProps={{ style: { fontFamily: "poppins" } }}
+                onChange={(e) => handleChange(e, setContactFormEmailInput)}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Button
+              variant="outlined"
+              onClick={(e) => sendMessage(e)}
+              size="large"
+              sx={{
+                fontFamily: "poppins",
+                color: "#586165",
+                borderColor: "rgba(88, 97, 101, 0.4)",
+                "&:hover": {
+                  color: "#1565c0",
+                },
+              }}
+            >
+              Send email
+            </Button>
+          </Grid>
+        </Grid>
+      </form>
+    </Box>
   )
 }
