@@ -20,7 +20,7 @@ const ArticleBodyContainer = styled.div`
   }
 
   & > h3 {
-    padding-bottom: 4px;
+    padding-bottom: 12px;
     font-size: 36px;
     line-height: 40px;
     font-weight: bold;
@@ -28,7 +28,7 @@ const ArticleBodyContainer = styled.div`
   }
 
   & > h4 {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     font-size: 28px;
     line-height: 32px;
     font-weight: bold;
@@ -36,7 +36,7 @@ const ArticleBodyContainer = styled.div`
   }
 
   & > h5 {
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     font-size: 20px;
     line-height: 24px;
     font-weight: bold;
@@ -48,6 +48,18 @@ const ArticleBodyContainer = styled.div`
     font-size: 18px;
     line-height: 24px;
     color: #586165;
+  }
+
+  & > p > .gatsby-resp-image-wrapper {
+    width: 80%;
+  }
+
+  & > p > a {
+    text-decoration: underline;
+
+    &:hover {
+      color: #93de4e;
+    }
   }
 `
 

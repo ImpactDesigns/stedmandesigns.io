@@ -7,75 +7,43 @@ projectFor: VSchool
 featuredImage: "./new-profile-pic.jpg"
 ---
 
-## Heading 1
+<!-- ## Heading 1
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+optio, eaque rerum! -->
 
-## Heading 2
+<!-- ## Heading 2 -->
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+optio, eaque rerum! -->
 
-### Heading 3
+### Marketing pages
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+As a Frontend Engineer for [Vschool](https://vschool.io/), I built out several landing and marketing pages. The site is a static generated site for speed using [Gatsby](https://www.gatsbyjs.com/) and [React.js](https://react.dev/).
 
-#### Heading 4
+![Marketing pages examples](./vschool-pages-half.jpg)
+<br>
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+Using [graphQL](https://graphql.org/) to query data from [Prismic](https://prismic.io/), we implemented a headless Content Management System (CSM) so that non-technical team members from Marketing could add/edit image and copy content.
 
-##### Heading 5
+### Component library
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+Another duty I was tasked with was building out, and maintaining, the component library that was part of the newly implemented Lotus Design System.
 
-##### Heading 5
+#### Components
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+The design system incorporated more than 20 components, ranging from buttons used in forms...
 
-##### Heading 5
+![Marketing pages examples](./vschool-components-2.jpg)
+<br>
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+<!-- #### Others -->
 
-#### Heading 4
+... and other UI elements.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-## Heading 2
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-```js
-const saltyDuckEgg = "chinese preserved food product"
-```
-
-```
-featuredImage: ../../../src/images/new-profile-pic.png
-```
-
-![My new profile picture](./new-profile-pic.jpg)
+![Marketing pages examples](./vschool-components-1.jpg)
+<br>
