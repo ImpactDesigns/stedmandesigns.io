@@ -51,7 +51,8 @@ const ArticleBodyContainer = styled.div`
   }
 
   & > p > .gatsby-resp-image-wrapper {
-    width: 80%;
+    // width: 80%;
+    maxheight: 300px;
   }
 
   & > p > a {
@@ -93,9 +94,9 @@ export default function ProjectPage({
     },
   }
 
-  React.useEffect(() => {
-    setIsModalOpen()
-  }, [setIsModalOpen])
+  // React.useEffect(() => {
+  //   setIsModalOpen()
+  // }, [setIsModalOpen])
 
   return (
     <Layout location={location} title={siteTitle}>
