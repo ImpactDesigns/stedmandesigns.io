@@ -23,13 +23,13 @@ Applying a white background to the form provided a more accessible user experien
 
 For the call to action, I applied the primary color for consistency.
 
-![Login page re-design](./tow-club-login-mobile.jpg)
+![Login page redesign](./tow-club-login-mobile.jpg)
 
 #### Desktop view
 
-The original app was not resonsive, and did not have a layout for devices larger than mobile. To keep focus on the form on larger screen widthds, I applied a two column layout - separating the form and the logo.
+The original app was not responsive, and did not have a layout for devices larger than mobile. To keep focus on the form on larger screen widths, I applied a two column layout - separating the form and the logo.
 
-![Login page re-design desktop view](./tow-club-login-desktop.jpg)
+![Login page redesign desktop view](./tow-club-login-desktop.jpg)
 
 ### Dashboard revamp
 
@@ -43,7 +43,7 @@ Adding new Tags and Dispatches were the most used actions on this page, so I mov
 
 The original buttons were so close together, they presented the risk of users pressing the wrong button. Applying a two column layout for the buttons provided padding between each, and a more uniform feel.
 
-![Dashboard page re-design](./tow-club-dashboard.jpg)
+![Dashboard page redesign](./tow-club-dashboard.jpg)
 
 ### Towing tags
 
@@ -51,11 +51,11 @@ The Tags page had similar issues with the UI.
 
 #### Button spacing
 
-Again, applying a two column layout provided some spacing between the buttons - lowering the risk pressing the wrong button, and provided a bit of "breathing room" around the buttons.
+Again, applying a two column layout provided some spacing between the buttons - lowering the risk of pressing the wrong button, and provided a bit of "breathing room" around the buttons.
 
 #### List items
 
-The details for the list items felt like they could use some spacing, and styling for IA. To create sepearation between list items, I created cards that used color and font weight to express the importance level of information.
+The details for the list items felt like they could use some spacing, and styling for IA. To create separation between list items, I created cards that used color and font weight to express the importance level of information.
 
 #### Updated pagination
 
@@ -63,25 +63,25 @@ The original list pagination looked more like a system bar, and was nowhere else
 
 I replaced it with a more a pagination component that
 
-![Tags page mobile re-design](./tow-club-tags-mobile.jpg)
+![Tags page mobile redesign](./tow-club-tags-mobile.jpg)
 
 #### Desktop view
 
-I also added a desktop view which display the list items in a table with the replaced pagination component.
+I also added a desktop view which displays the list items in a table with the replaced pagination component.
 
-![Tags page desktop re-design](./tow-club-tags-desktop.jpg)
+![Tags page desktop redesign](./tow-club-tags-desktop.jpg)
 
 ### Invoices
 
 There was a lot of content on the Invoice pages. A goal of mine here to imporive usability was to group like content.
 
-![Invoice pages mobile re-design](./tow-club-invoice-mobile.jpg)
+![Invoice pages mobile redesign](./tow-club-invoice-mobile.jpg)
 
-![Invoice pages desktop re-design](./tow-club-invoice-desktop.jpg)
+![Invoice pages desktop redesign](./tow-club-invoice-desktop.jpg)
 
 ### Field camera
 
-A requested feature was a integrated field camera. In the previous version, users would have to use a different app to take a picture of a vehicle, and manually upload it from their device.
+A requested feature was an integrated field camera. In the previous version, users would have to use a different app to take a picture of a vehicle, and manually upload it from their device.
 
 #### Interface
 
@@ -103,6 +103,6 @@ Tow truck drivers needed to take pictures of damage to document what was pre-exi
 
 #### Review images
 
-Users have the ability to view a gallery of pictures and remove any un-wanted images.
+Users have the ability to view a gallery of pictures and remove any unwanted images.
 
 ![Field camera review page](./tow-club-field-camera-2.jpg)
