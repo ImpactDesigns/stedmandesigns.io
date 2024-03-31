@@ -1,81 +1,30 @@
 ---
-title: Lotus Design System
-description: Developed the component library and implemented components across website and marketing pages.
+title: Component library
+description: Created and maintained components in support of the design system.
 category: Dev
-date: "2019-08-02"
-projectFor: VSchool
-featuredImage: "./new-profile-pic.jpg"
+date: "2020-07-02"
+projectFor: Lotus Design System
+featuredImage: "./vschool-storybook-2.jpg"
 ---
 
-## Heading 1
+### Component library
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+As a Frontend Engineer for [Vschool](https://vschool.io/), as side from getting to build out pages to support the Marketing team, I had the opportunity to build out and maintain components for Lotus Design System's component library.
 
-## Heading 2
+#### Figma
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+The design system incorporated more than 20 UI components such as avatar, status chip, and form components.
 
-### Heading 3
+![Components in Figma example one](./vschool-components-1.jpg)
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+![Components in Figma example three](./vschool-components-3.jpg)
 
-#### Heading 4
+#### Storybook
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+I leveraged Storybook to build, maintain, and document components in the library.
 
-##### Heading 5
+![Components in Figma example two](./vschool-components-2.jpg)
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
+![Button components in Storybook](./vschool-storybook-2.jpg)
 
-##### Heading 5
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-##### Heading 5
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-#### Heading 4
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-## Heading 2
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-optio, eaque rerum!
-
-```js
-const saltyDuckEgg = "chinese preserved food product"
-```
-
-```
-featuredImage: ../../../src/images/new-profile-pic.png
-```
-
-![My new profile picture](./new-profile-pic.jpg)
+![Button component documented in Storybook](./vschool-storybook-1.jpg)
