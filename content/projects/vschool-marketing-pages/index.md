@@ -23,7 +23,7 @@ optio, eaque rerum! -->
 
 ### Marketing pages
 
-As a Frontend Engineer for [Vschool](https://vschool.io/), I built out several landing and marketing pages. The site is a static generated site for speed using [Gatsby](https://www.gatsbyjs.com/) and [React.js](https://react.dev/).
+As a Frontend Engineer for [Vschool](https://vschool.io/), I built out several landing and marketing pages. The site is a static generated site for speed using **Gatsby** and **React.js**.
 
 ![Marketing pages examples](./vschool-pages-half.jpg)
 <br>

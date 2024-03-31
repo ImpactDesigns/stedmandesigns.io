@@ -4,7 +4,7 @@ description: Redesign for the end-to-end app for dispatching tow truck drivers f
 category: Design
 date: "2021-07-01"
 projectFor: Tow Club
-featuredImage: "./new-profile-pic.jpg"
+featuredImage: "./tow-club-login-mobile.jpg"
 ---
 
 Following the success of designing and developing the Rocket Auction app, the same folks asked me to do a re-design of their [Tow Club](https://www.tow.club/) app.
@@ -29,11 +29,11 @@ For the call to action, I applied the primary color for consistency.
 
 The original app was not resonsive, and did not have a layout for devices larger than mobile. To keep focus on the form on larger screen widthds, I applied a two column layout - separating the form and the logo.
 
-![Login page re-design](./tow-club-login-desktop.jpg)
+![Login page re-design desktop view](./tow-club-login-desktop.jpg)
 
 ### Dashboard revamp
 
-The dashboard provides the user with the ability to create, or edit, towing dispatches and tags. 
+The dashboard provides the user with the ability to create, or edit, towing dispatches and tags.
 
 #### Commonly used actions
 
@@ -61,7 +61,7 @@ The details for the list items felt like they could use some spacing, and stylin
 
 The original list pagination looked more like a system bar, and was nowhere else in the app. The pagination only used arrows, so the user had no idea where they were in the list.
 
-I replaced it with a more a pagination component that 
+I replaced it with a more a pagination component that
 
 ![Tags page mobile re-design](./tow-club-tags-mobile.jpg)
 
@@ -69,19 +69,19 @@ I replaced it with a more a pagination component that
 
 I also added a desktop view which display the list items in a table with the replaced pagination component.
 
-![Tags page mobile re-design](./tow-club-tags-desktop.jpg)
+![Tags page desktop re-design](./tow-club-tags-desktop.jpg)
 
 ### Invoices
 
 There was a lot of content on the Invoice pages. A goal of mine here to imporive usability was to group like content.
 
-![Tags page desktop re-design](./tow-club-invoice-mobile.jpg)
+![Invoice pages mobile re-design](./tow-club-invoice-mobile.jpg)
 
-![Tags page desktop re-design](./tow-club-invoice-desktop.jpg)
+![Invoice pages desktop re-design](./tow-club-invoice-desktop.jpg)
 
 ### Field camera
 
-A requested feature was a integrated field camera. In the previous version, users would have to use a different app to take a picture of a vehicle, and manually upload it from their device. 
+A requested feature was a integrated field camera. In the previous version, users would have to use a different app to take a picture of a vehicle, and manually upload it from their device.
 
 #### Interface
 
@@ -99,10 +99,10 @@ Users can quickly close the camera by using the non-invasive close button.
 
 Tow truck drivers needed to take pictures of damage to document what was pre-existing damage, or something they caused. The user can quickly switch how the image is saved (Violation, or Damage) by pressing one of the transparent buttons that do not interfere with the image.
 
-![Tags page desktop re-design](./tow-club-field-camera-1.jpg)
+![Field camera taking picture of suv](./tow-club-field-camera-1.jpg)
 
 #### Review images
 
 Users have the ability to view a gallery of pictures and remove any un-wanted images.
 
-![Tags page desktop re-design](./tow-club-field-camera-2.jpg)
+![Field camera review page](./tow-club-field-camera-2.jpg)
