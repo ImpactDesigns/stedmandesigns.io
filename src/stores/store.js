@@ -4,8 +4,6 @@ const useAppStore = create((set) => ({
   isFlyoutOpen: false,
   setIsFlyoutOpen: () =>
     set((state) => ({ isFlyoutOpen: !state.isFlyoutOpen })),
-  isModalOpen: false,
-  setIsModalOpen: () => set((state) => ({ isModalOpen: !state.isModalOpen })),
   featuredProjectType: "dev",
   setFeaturedProjectType: (stuffToAdd) =>
     set({ featuredProjectType: stuffToAdd }),
