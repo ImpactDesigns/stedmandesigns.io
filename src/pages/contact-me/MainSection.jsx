@@ -1,9 +1,9 @@
 import React from "react"
 import useAppStore from "../../stores/store"
 import Box from "@mui/material/Box"
-import Snackbar from "@mui/material/Snackbar"
 import IconButton from "@mui/material/IconButton"
 import CloseIcon from "@mui/icons-material/Close"
+import MainSectionSnackbar from "./MainSectionSnackbar"
 import MainSectionContactForm from "./MainSectionContactForm"
 
 export default function MainSection() {
@@ -33,7 +33,7 @@ export default function MainSection() {
 
   return (
     <Box pt="24px" pb="32px" px={{ sm: 6, md: 25, lg: 44 }}>
-      <Snackbar
+      <MainSectionSnackbar
         open={isSnackbarOpen}
         autoHideDuration={3500}
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -49,7 +49,7 @@ export default function MainSection() {
           },
         }}
       />
-      <MainSectionContactForm>Hello 2</MainSectionContactForm>
+      <MainSectionContactForm />
     </Box>
   )
 }
